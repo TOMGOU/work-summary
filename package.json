@@ -1,0 +1,20 @@
+{
+  "name": "work-summary",
+  "version": "1.0.0",
+  "description": "To record the keypoints of problems during working",
+  "main": "index.js",
+  "scripts": {
+    "gh-pages": "./git.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TOMGOU/work-summary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TOMGOU/work-summary/issues"
+  },
+  "homepage": "https://github.com/TOMGOU/work-summary#readme"
+}
