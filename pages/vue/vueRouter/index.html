@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #out {
+      background: greenyellow;
+    }
+    #mid {
+      background: red;
+    }
+    #in {
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <a href="#user"> 点击跳转到 user </a>
+  <a href="#clinet"> 点击跳转到 client </a>
+  <div id="history1">history1</div>
+  <div id="history2">history2</div>
+  <div id="out">
+    out
+    <div id="mid">
+      mid
+      <div id="in">in</div>
+    </div>
+  </div>
+  <script>
+    // window.addEventListener('hashchange', (e) => {
+    //   console.log('hashchange', e)
+    // })
+    // var bool = false
+    // document.getElementById('out').addEventListener('click', (e) => {
+    //   console.log('onclick-out', e)
+    // }, bool)
+    // document.getElementById('mid').addEventListener('click', (e) => {
+    //   console.log('onclick-mid', e)
+    // }, bool)
+    // document.getElementById('in').addEventListener('click', (e) => {
+    //   console.log('onclick-in', e)
+    //   location.hash = '#user'
+    // }, bool)
+
+    
+    document.getElementById('history1').addEventListener('click', (e) => {
+      history.pushState({a: 1}, null, "test1");
+      console.log({ history })
+    })
+    document.getElementById('history2').addEventListener('click', (e) => {
+      history.replaceState({b: 1}, null, "test2");
+      console.log({ history })
+    })
+    document.getElementById('in').addEventListener('click', (e) => {
+      history.back()
+      console.log({ history })
+    })
+    window.onpopstate = function() {
+      console.log({ onpopstate: history })
+    }
+  </script>
+</body>
+</html>

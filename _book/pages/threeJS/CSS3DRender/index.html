@@ -1,0 +1,2154 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CSS3DRender · 工作总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="tomgou">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Raycaster/" />
+    
+    
+    <link rel="prev" href="../glTF/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    工作总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../gitbook/">
+            
+                <a href="../../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../gitbook/mermaid/">
+            
+                <a href="../../gitbook/mermaid/">
+            
+                    
+                    Mermaid-gb3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../gitbook/markdown/">
+            
+                <a href="../../gitbook/markdown/">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../experience/">
+            
+                <a href="../../experience/">
+            
+                    
+                    KeyPoints
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../experience/webView/">
+            
+                <a href="../../experience/webView/">
+            
+                    
+                    Web-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../experience/pageMeta/">
+            
+                <a href="../../experience/pageMeta/">
+            
+                    
+                    Page-Meta
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../experience/PDFPreview/">
+            
+                <a href="../../experience/PDFPreview/">
+            
+                    
+                    PDF-Preview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../experience/subscribeMessage/">
+            
+                <a href="../../experience/subscribeMessage/">
+            
+                    
+                    模板消息订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../experience/channelLive/">
+            
+                <a href="../../experience/channelLive/">
+            
+                    
+                    跳转视频号和直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../experience/internationalization/">
+            
+                <a href="../../experience/internationalization/">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../experience/biEcharts/">
+            
+                <a href="../../experience/biEcharts/">
+            
+                    
+                    BI-Echarts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../experience/lowCode/">
+            
+                <a href="../../experience/lowCode/">
+            
+                    
+                    低代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../experience/taroWepy/">
+            
+                <a href="../../experience/taroWepy/">
+            
+                    
+                    wepy->taro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../experience/miniprogramCi/">
+            
+                <a href="../../experience/miniprogramCi/">
+            
+                    
+                    miniprogram-ci
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../experience/fullScreen/">
+            
+                <a href="../../experience/fullScreen/">
+            
+                    
+                    full-screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../experience/silentLogin/">
+            
+                <a href="../../experience/silentLogin/">
+            
+                    
+                    静默登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../experience/timeDiff/">
+            
+                <a href="../../experience/timeDiff/">
+            
+                    
+                    时间差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../../experience/issue/">
+            
+                <a href="../../experience/issue/">
+            
+                    
+                    issue模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../../experience/webp/">
+            
+                <a href="../../experience/webp/">
+            
+                    
+                    webp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../../experience/markdown/">
+            
+                <a href="../../experience/markdown/">
+            
+                    
+                    markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../css/">
+            
+                <a href="../../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../css/UE/">
+            
+                <a href="../../css/UE/">
+            
+                    
+                    提升用户体验细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../css/flex/">
+            
+                <a href="../../css/flex/">
+            
+                    
+                    flex最后一行左对齐问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../css/fixed/">
+            
+                <a href="../../css/fixed/">
+            
+                    
+                    神奇的固定定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../css/layout/">
+            
+                <a href="../../css/layout/">
+            
+                    
+                    布局与居中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../css/pollution/">
+            
+                <a href="../../css/pollution/">
+            
+                    
+                    样式污染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../css/img/">
+            
+                <a href="../../css/img/">
+            
+                    
+                    图片尺寸
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../css/ipxFit/">
+            
+                <a href="../../css/ipxFit/">
+            
+                    
+                    ipx适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../css/radio/">
+            
+                <a href="../../css/radio/">
+            
+                    
+                    radio样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../css/BFC/">
+            
+                <a href="../../css/BFC/">
+            
+                    
+                    BFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../../css/REM/">
+            
+                <a href="../../css/REM/">
+            
+                    
+                    REM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../js/">
+            
+                <a href="../../js/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../js/performance/">
+            
+                <a href="../../js/performance/">
+            
+                    
+                    性能优化细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../js/promise/">
+            
+                <a href="../../js/promise/">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../js/proto/">
+            
+                <a href="../../js/proto/">
+            
+                    
+                    原型及原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../js/module/">
+            
+                <a href="../../js/module/">
+            
+                    
+                    模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../js/ES6/">
+            
+                <a href="../../js/ES6/">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../js/RegExp/">
+            
+                <a href="../../js/RegExp/">
+            
+                    
+                    正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../js/callApplyBind/">
+            
+                <a href="../../js/callApplyBind/">
+            
+                    
+                    call/apply/bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../js/babel/">
+            
+                <a href="../../js/babel/">
+            
+                    
+                    babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../js/typescript/">
+            
+                <a href="../../js/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../js/debounceThrottle/">
+            
+                <a href="../../js/debounceThrottle/">
+            
+                    
+                    Debounce & Throttle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../js/bitOperation/">
+            
+                <a href="../../js/bitOperation/">
+            
+                    
+                    Bit Operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../js/ajax/">
+            
+                <a href="../../js/ajax/">
+            
+                    
+                    Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../../js/designPattern/">
+            
+                <a href="../../js/designPattern/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../../js/eslint/">
+            
+                <a href="../../js/eslint/">
+            
+                    
+                    ESlint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../../js/test/">
+            
+                <a href="../../js/test/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../vue/">
+            
+                <a href="../../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../vue/vueCli/">
+            
+                <a href="../../vue/vueCli/">
+            
+                    
+                    vue-cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../vue/vueRouter/">
+            
+                <a href="../../vue/vueRouter/">
+            
+                    
+                    vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../vue/vuex/">
+            
+                <a href="../../vue/vuex/">
+            
+                    
+                    vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../vue/ssr/">
+            
+                <a href="../../vue/ssr/">
+            
+                    
+                    ssr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../vue/diff/">
+            
+                <a href="../../vue/diff/">
+            
+                    
+                    diff
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../vue/reactive/">
+            
+                <a href="../../vue/reactive/">
+            
+                    
+                    reactive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../vue/eventEmitter/">
+            
+                <a href="../../vue/eventEmitter/">
+            
+                    
+                    eventBus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../vue/nextTick/">
+            
+                <a href="../../vue/nextTick/">
+            
+                    
+                    nextTick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../vue/decoration/">
+            
+                <a href="../../vue/decoration/">
+            
+                    
+                    decoration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../vue/vue3/">
+            
+                <a href="../../vue/vue3/">
+            
+                    
+                    vue3新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../../vue/dom/">
+            
+                <a href="../../vue/dom/">
+            
+                    
+                    虚拟dom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../../vue/communication/">
+            
+                <a href="../../vue/communication/">
+            
+                    
+                    组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../react/">
+            
+                <a href="../../react/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../react/context/">
+            
+                <a href="../../react/context/">
+            
+                    
+                    context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../react/reactRouter/">
+            
+                <a href="../../react/reactRouter/">
+            
+                    
+                    react-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../react/reactRedux/">
+            
+                <a href="../../react/reactRedux/">
+            
+                    
+                    react-redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../react/hooks/">
+            
+                <a href="../../react/hooks/">
+            
+                    
+                    hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../react/portal/">
+            
+                <a href="../../react/portal/">
+            
+                    
+                    portal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../react/suspense/">
+            
+                <a href="../../react/suspense/">
+            
+                    
+                    suspense
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../react/sourceCode/">
+            
+                <a href="../../react/sourceCode/">
+            
+                    
+                    source-code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../react/reactNative/">
+            
+                <a href="../../react/reactNative/">
+            
+                    
+                    react-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    threeJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Math/">
+            
+                <a href="../Math/">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Webgl/">
+            
+                <a href="../Webgl/">
+            
+                    
+                    Webgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Shader/">
+            
+                <a href="../Shader/">
+            
+                    
+                    Shader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Draco/">
+            
+                <a href="../Draco/">
+            
+                    
+                    Draco
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../glTF/">
+            
+                <a href="../glTF/">
+            
+                    
+                    glTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    CSS3DRender
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Raycaster/">
+            
+                <a href="../Raycaster/">
+            
+                    
+                    Raycaster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../MaterialReset/">
+            
+                <a href="../MaterialReset/">
+            
+                    
+                    MaterialReset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Animation/">
+            
+                <a href="../Animation/">
+            
+                    
+                    Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../GuiControls/">
+            
+                <a href="../GuiControls/">
+            
+                    
+                    GuiControls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../Panorama/">
+            
+                <a href="../Panorama/">
+            
+                    
+                    Panorama
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../KeyboardControl/">
+            
+                <a href="../KeyboardControl/">
+            
+                    
+                    KeyboardControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../Audio/">
+            
+                <a href="../Audio/">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../Encoding/">
+            
+                <a href="../Encoding/">
+            
+                    
+                    sRGBEncoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../node/nvm/">
+            
+                <a href="../../node/nvm/">
+            
+                    
+                    nvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../node/fs/">
+            
+                <a href="../../node/fs/">
+            
+                    
+                    fs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../node/path/">
+            
+                <a href="../../node/path/">
+            
+                    
+                    path
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../node/http/">
+            
+                <a href="../../node/http/">
+            
+                    
+                    http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../node/https/">
+            
+                <a href="../../node/https/">
+            
+                    
+                    https
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../node/events/">
+            
+                <a href="../../node/events/">
+            
+                    
+                    events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../../node/childProcess/">
+            
+                <a href="../../node/childProcess/">
+            
+                    
+                    child_process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../node/stream/">
+            
+                <a href="../../node/stream/">
+            
+                    
+                    stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../node/buffer/">
+            
+                <a href="../../node/buffer/">
+            
+                    
+                    buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../../node/dependency/">
+            
+                <a href="../../node/dependency/">
+            
+                    
+                    依赖管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../webpack/">
+            
+                <a href="../../webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../webpack/basic/">
+            
+                <a href="../../webpack/basic/">
+            
+                    
+                    基础配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../webpack/optimize/">
+            
+                <a href="../../webpack/optimize/">
+            
+                    
+                    optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../webpack/plugin/">
+            
+                <a href="../../webpack/plugin/">
+            
+                    
+                    webpack-plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../webpack/loader/">
+            
+                <a href="../../webpack/loader/">
+            
+                    
+                    webpack-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../webpack/hmr/">
+            
+                <a href="../../webpack/hmr/">
+            
+                    
+                    hotModuleReplace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../webpack/webpack5/">
+            
+                <a href="../../webpack/webpack5/">
+            
+                    
+                    webpack5新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../webpack/vite/">
+            
+                <a href="../../webpack/vite/">
+            
+                    
+                    vite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../webpack/ndb/">
+            
+                <a href="../../webpack/ndb/">
+            
+                    
+                    ndb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../../webpack/websocket/">
+            
+                <a href="../../webpack/websocket/">
+            
+                    
+                    websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../../webpack/rollup/">
+            
+                <a href="../../webpack/rollup/">
+            
+                    
+                    rollup与soucemap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../../webpack/gulp/">
+            
+                <a href="../../webpack/gulp/">
+            
+                    
+                    gulp与yargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../codeReview/">
+            
+                <a href="../../codeReview/">
+            
+                    
+                    Code Review
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../codeReview/cyclomaticComplexity/">
+            
+                <a href="../../codeReview/cyclomaticComplexity/">
+            
+                    
+                    Cyclomatic Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../projects/">
+            
+                <a href="../../projects/">
+            
+                    
+                    Projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../interview/">
+            
+                <a href="../../interview/">
+            
+                    
+                    Interview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../interview/eventLoop/">
+            
+                <a href="../../interview/eventLoop/">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../interview/deepClone/">
+            
+                <a href="../../interview/deepClone/">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../interview/CDN/">
+            
+                <a href="../../interview/CDN/">
+            
+                    
+                    CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../interview/safety/">
+            
+                <a href="../../interview/safety/">
+            
+                    
+                    网络安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../interview/http/">
+            
+                <a href="../../interview/http/">
+            
+                    
+                    http问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../interview/Internet/">
+            
+                <a href="../../interview/Internet/">
+            
+                    
+                    url输入到展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../../interview/typescript/">
+            
+                <a href="../../interview/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../../interview/BFC/">
+            
+                <a href="../../interview/BFC/">
+            
+                    
+                    BFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../../interview/import/">
+            
+                <a href="../../interview/import/">
+            
+                    
+                    按需引入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" data-path="../../interview/projects/">
+            
+                <a href="../../interview/projects/">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../others/">
+            
+                <a href="../../others/">
+            
+                    
+                    Others
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../others/gitLabCICD/">
+            
+                <a href="../../others/gitLabCICD/">
+            
+                    
+                    GitLab CI/CD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../../others/linux/">
+            
+                <a href="../../others/linux/">
+            
+                    
+                    云服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../../others/mysql/">
+            
+                <a href="../../others/mysql/">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../../others/cloud/">
+            
+                <a href="../../others/cloud/">
+            
+                    
+                    微信小程序云开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../../others/lerna/">
+            
+                <a href="../../others/lerna/">
+            
+                    
+                    lerna
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../../others/charles/">
+            
+                <a href="../../others/charles/">
+            
+                    
+                    charles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../../others/whistle/">
+            
+                <a href="../../others/whistle/">
+            
+                    
+                    whistle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../../others/docker/">
+            
+                <a href="../../others/docker/">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../../others/git/">
+            
+                <a href="../../others/git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="../../others/slidev/">
+            
+                <a href="../../others/slidev/">
+            
+                    
+                    sli.dev
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="../../others/iTerm/">
+            
+                <a href="../../others/iTerm/">
+            
+                    
+                    iTerm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.12" data-path="../../others/chrome/">
+            
+                <a href="../../others/chrome/">
+            
+                    
+                    chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.13" data-path="../../others/husky/">
+            
+                <a href="../../others/husky/">
+            
+                    
+                    husky
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >CSS3DRender</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="css3drender-&#x6807;&#x6CE8;">CSS3DRender &#x6807;&#x6CE8;</h1>
+<blockquote>
+<p>&#x5728; 3D &#x6807;&#x6CE8;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; CSS3DRenderer &#x6765;&#x6E32;&#x67D3; 3D &#x6807;&#x6CE8;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mark&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;des&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>&#x5200;&#x7247;&#x7535;&#x6C60;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>&#x5355;&#x4F53;&#x7535;&#x6C60;&#x957F;96mm&#x3001;&#x5BBD;9mm&#x3001;&#x9AD8;1.35mm<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>&#x53EF;&#x5FAA;&#x73AF;&#x5145;&#x653E;&#x7535;3000&#x6B21;&#x4EE5;&#x4E0A;&#xFF0C;&#x7EED;&#x822A;600&#x516C;&#x91CC;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { CSS3DObject, CSS3DRenderer } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;three/examples/jsm/renderers/CSS3DRenderer.js&apos;</span>;
+
+<span class="hljs-comment">// &#x521B;&#x5EFA;&#x6807;&#x6CE8;&#xFF1A;&#x5C06;&#x666E;&#x901A; html &#x8F6C;&#x6362;&#x4E3A; 3D &#x6807;&#x6CE8;</span>
+<span class="hljs-keyword">const</span> mark1 = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&apos;mark&apos;</span>)[<span class="hljs-number">0</span>];
+mark1.style.visibility = <span class="hljs-string">&apos;visible&apos;</span>;
+<span class="hljs-keyword">const</span> label1 = <span class="hljs-keyword">new</span> CSS3DObject(mark1);
+mark1.style.pointerEvents = <span class="hljs-string">&apos;none&apos;</span>;
+label1.position.copy(LFSprite.position);
+label1.scale.set(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1.0</span>);
+label1.position.set(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+label1.position.x -= <span class="hljs-number">220</span>;
+label1.position.y += <span class="hljs-number">50</span>;
+label1.rotateY(-<span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">2</span>);
+model.add(label1);
+
+<span class="hljs-comment">// &#x6E32;&#x67D3; 3D &#x6807;&#x6CE8;</span>
+<span class="hljs-keyword">const</span> labelRenderer = <span class="hljs-keyword">new</span> CSS3DRenderer();
+labelRenderer.setSize(<span class="hljs-built_in">window</span>.innerWidth, <span class="hljs-built_in">window</span>.innerHeight);
+labelRenderer.domElement.style.position = <span class="hljs-string">&apos;absolute&apos;</span>;
+labelRenderer.domElement.style.top = <span class="hljs-string">&apos;0px&apos;</span>;
+labelRenderer.domElement.style.left = <span class="hljs-string">&apos;0px&apos;</span>;
+labelRenderer.domElement.style.pointerEvents = <span class="hljs-string">&apos;none&apos;</span>;
+<span class="hljs-built_in">document</span>.body.appendChild(labelRenderer.domElement);
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; tomgou 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-07-08 08:01:23
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../glTF/" class="navigation navigation-prev " aria-label="Previous page: glTF">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Raycaster/" class="navigation navigation-next " aria-label="Next page: Raycaster">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CSS3DRender","level":"1.8.6","depth":2,"next":{"title":"Raycaster","level":"1.8.7","depth":2,"path":"pages/threeJS/Raycaster/index.md","ref":"pages/threeJS/Raycaster/index.md","articles":[]},"previous":{"title":"glTF","level":"1.8.5","depth":2,"path":"pages/threeJS/glTF/index.md","ref":"pages/threeJS/glTF/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-pro","github","hide-element","chapter-fold","splitter","-lunr","-search","search-pro","copy-code-button","back-to-top-button","tbfed-pagefooter","popup","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy tomgou 2022","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://tomgou.github.io/algorithm-study/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"back-to-top-button":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"tomgou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"工作总结","language":"zh-hans","gitbook":"*","description":"日常工作记录"},"file":{"path":"pages/threeJS/CSS3DRender/index.md","mtime":"2022-07-08T00:01:23.759Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-14T13:45:36.323Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

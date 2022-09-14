@@ -1,0 +1,23 @@
+### Vue基础知识
+- 混入mixin
+- 插槽: 匿名+具名+作用域插槽 v-slot/slot-scope
+- plugin用方法及原理
+- 过滤器用方法及原理
+- animation css will-change
+- v-for中key的作用与diff算法
+- nextTick原理
+- v-if与v-show的区别
+- 路由守卫，如何动态绑定路由信息？
+- 拦截器怎么使用？
+- watch与computed的区别
+- 数据双向绑定 ✅
+- 虚拟dom
+- vite原理
+- vue响应式原理：this.$set
+- vue-cli源码解析 ✅
+- vue-router源码解析 ✅
+- 组件属性透传： v-bind= $attrs/inheritAttrs: false
+- BFC: float/overflow: auto
+- 吸顶：position: sticky
+- vuex
+- ssr
