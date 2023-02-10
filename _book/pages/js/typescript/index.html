@@ -950,7 +950,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../../react/context/">
+        <li class="chapter " data-level="1.7.1" data-path="../../react/umiProComponents/">
+            
+                <a href="../../react/umiProComponents/">
+            
+                    
+                    umi + proComponents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../react/context/">
             
                 <a href="../../react/context/">
             
@@ -963,7 +976,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../../react/reactRouter/">
+        <li class="chapter " data-level="1.7.3" data-path="../../react/reactRouter/">
             
                 <a href="../../react/reactRouter/">
             
@@ -976,7 +989,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../../react/reactRedux/">
+        <li class="chapter " data-level="1.7.4" data-path="../../react/reactRedux/">
             
                 <a href="../../react/reactRedux/">
             
@@ -989,7 +1002,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="../../react/hooks/">
+        <li class="chapter " data-level="1.7.5" data-path="../../react/hooks/">
             
                 <a href="../../react/hooks/">
             
@@ -1002,7 +1015,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="../../react/portal/">
+        <li class="chapter " data-level="1.7.6" data-path="../../react/portal/">
             
                 <a href="../../react/portal/">
             
@@ -1015,7 +1028,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="../../react/suspense/">
+        <li class="chapter " data-level="1.7.7" data-path="../../react/suspense/">
             
                 <a href="../../react/suspense/">
             
@@ -1028,7 +1041,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.7" data-path="../../react/sourceCode/">
+        <li class="chapter " data-level="1.7.8" data-path="../../react/sourceCode/">
             
                 <a href="../../react/sourceCode/">
             
@@ -1041,7 +1054,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.8" data-path="../../react/reactNative/">
+        <li class="chapter " data-level="1.7.9" data-path="../../react/reactNative/">
             
                 <a href="../../react/reactNative/">
             
@@ -1779,12 +1792,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.14.1" data-path="../../others/gitLabCICD/">
+        <li class="chapter " data-level="1.14.1" data-path="../../others/gitLab/">
             
-                <a href="../../others/gitLabCICD/">
+                <a href="../../others/gitLab/">
             
                     
-                    GitLab CI/CD
+                    GitLabCI/CD
             
                 </a>
             
@@ -2128,47 +2141,151 @@ loggingIdentity({length: <span class="hljs-number">10</span>, value: <span class
 <h3 id="11-readonly-&#x2705;">11. Readonly &#x2705;</h3>
 <p>Readonly<t> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x67D0;&#x4E2A;&#x7C7B;&#x578B;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x53D8;&#x4E3A;&#x53EA;&#x8BFB;&#x5C5E;&#x6027;&#xFF0C;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x4E0D;&#x80FD;&#x88AB;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#x3002;</t></p>
 <h3 id="12-record-&#x2705;">12. Record &#x2705;</h3>
-<p>Record<k extends="" keyof="" any,="" t=""> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06; K &#x4E2D;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x8F6C;&#x5316;&#x4E3A; T &#x7C7B;&#x578B;&#x3002;</k></p>
-<pre><code class="lang-ts"><span class="hljs-comment">// &#x8054;&#x5408;&#x7C7B;&#x578B;</span>
-<span class="hljs-keyword">interface</span> PageInfo {
-  title: <span class="hljs-built_in">string</span>;
+<p><code>Record&lt;K extends keyof any, T&gt;</code> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06; K &#x4E2D;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x8F6C;&#x5316;&#x4E3A; T &#x7C7B;&#x578B;&#x3002;</p>
+<pre><code class="lang-ts">// &#x8054;&#x5408;&#x7C7B;&#x578B;
+interface PageInfo {
+  title: string;
 }
 
-<span class="hljs-keyword">type</span> Page = <span class="hljs-string">&quot;home&quot;</span> | <span class="hljs-string">&quot;about&quot;</span> | <span class="hljs-string">&quot;contact&quot;</span>;
+type Page = &quot;home&quot; | &quot;about&quot; | &quot;contact&quot;;
 
-<span class="hljs-keyword">const</span> x: Record&lt;Page, PageInfo&gt; = {
-  about: { title: <span class="hljs-string">&quot;about&quot;</span> },
-  contact: { title: <span class="hljs-string">&quot;contact&quot;</span> },
-  home: { title: <span class="hljs-string">&quot;home&quot;</span> }
+const x: Record&lt;Page, PageInfo&gt; = {
+  about: { title: &quot;about&quot; },
+  contact: { title: &quot;contact&quot; },
+  home: { title: &quot;home&quot; }
 };
 
-<span class="hljs-comment">// &#x679A;&#x4E3E;</span>
-<span class="hljs-keyword">enum</span> Page {
+// &#x679A;&#x4E3E;
+enum Page {
   HOME,
   CONTACT 
 }
 
-<span class="hljs-keyword">type</span> PageInfo = {
-  title: <span class="hljs-built_in">string</span>
+type PageInfo = {
+  title: string
 }
 
-<span class="hljs-keyword">const</span> x: Record&lt;Page, PageInfo&gt; = {
-  <span class="hljs-number">0</span>: { title: <span class="hljs-string">&apos;123&apos;</span> },
-  <span class="hljs-number">1</span>: { title: <span class="hljs-string">&apos;123&apos;</span> }
+const x: Record&lt;Page, PageInfo&gt; = {
+  0: { title: &apos;123&apos; },
+  1: { title: &apos;123&apos; }
+}
+
+enum DeviceComponents {
+  DRIVER = &apos;DRIVER&apos;,
+  JACK = &apos;JACK&apos;,
+  MOTOR = &apos;MOTOR&apos;,
+  BATTERY = &apos;BATTERY&apos;,
+  SENSOR = &apos;SENSOR&apos;,
+  COMMUNICATION = &apos;COMMUNICATION&apos;,
+  NAVIGATION = &apos;NAVIGATION&apos;,
+}
+
+const DeviceComponentsMap: Record&lt;DeviceComponents, string&gt; = {
+  DRIVER: &apos;&#x9A71;&#x52A8;&#x6A21;&#x5757;&apos;,
+  JACK: &apos;&#x9876;&#x5347;&#x6A21;&#x5757;&apos;,
+  MOTOR: &apos;&#x8FD0;&#x52A8;&#x72B6;&#x6001;&apos;,
+  BATTERY: &apos;&#x7535;&#x6E90;&#x7BA1;&#x7406;&apos;,
+  SENSOR: &apos;&#x4F20;&#x611F;&#x5668;&#x6570;&#x636E;&apos;,
+  COMMUNICATION: &apos;&#x901A;&#x8BAF;&#x6A21;&#x5757;&apos;,
+  NAVIGATION: &apos;&#x5BFC;&#x822A;&#x6A21;&#x5757;&apos;,
+};
+
+// &#x666E;&#x901A;&#x51FD;&#x6570;
+
+function transform&lt;T extends Record&lt;string, any&gt;&gt; (
+  iteratee: (node: T) =&gt; any,
+  treeData: T[],
+  childrenKey: keyof T = &apos;children&apos;,
+) {
+  return treeData.map((node) =&gt; {
+    const result = iteratee(node);
+    const children = result[childrenKey];
+
+    if (Array.isArray(children)) {
+      result[childrenKey] = transform(iteratee, children, childrenKey);
+    }
+
+    return result;
+  });
+}
+
+// &#x7BAD;&#x5934;&#x51FD;&#x6570;
+
+const transform2 = &lt;T extends Record&lt;string, string | number&gt;&gt;(
+  iteratee: (node: T) =&gt; any,
+  treeData: T[],
+  childrenKey: keyof T = &apos;children&apos;,
+) =&gt; {
+  return treeData.map((node) =&gt; {
+    const result = iteratee(node);
+    const children = result[childrenKey];
+
+    if (Array.isArray(children)) {
+      result[childrenKey] = transform2(iteratee, children, childrenKey);
+    }
+
+    return result;
+  });
 }
 </code></pre>
 <h3 id="13--exclude-&#x2705;">13.  Exclude &#x2705;</h3>
-<p>Exclude<t, u=""> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x67D0;&#x4E2A;&#x7C7B;&#x578B;&#x4E2D;&#x5C5E;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;&#x7684;&#x7C7B;&#x578B;&#x79FB;&#x9664;&#x6389;&#x3002;</t,></p>
-<pre><code class="lang-ts"><span class="hljs-keyword">type</span> T0 = Exclude&lt;<span class="hljs-string">&quot;a&quot;</span> | <span class="hljs-string">&quot;b&quot;</span> | <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;a&quot;</span>&gt;; <span class="hljs-comment">// &quot;b&quot; | &quot;c&quot;</span>
+<p><code>Exclude&lt;T, U&gt;</code> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x67D0;&#x4E2A;&#x7C7B;&#x578B;&#x4E2D;&#x5C5E;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;&#x7684;&#x7C7B;&#x578B;&#x79FB;&#x9664;&#x6389;&#x3002;</p>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x8054;&#x5408;&#x7C7B;&#x578B;</span>
+<span class="hljs-keyword">type</span> T0 = Exclude&lt;<span class="hljs-string">&quot;a&quot;</span> | <span class="hljs-string">&quot;b&quot;</span> | <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;a&quot;</span>&gt;; <span class="hljs-comment">// &quot;b&quot; | &quot;c&quot;</span>
 <span class="hljs-keyword">type</span> T1 = Exclude&lt;<span class="hljs-string">&quot;a&quot;</span> | <span class="hljs-string">&quot;b&quot;</span> | <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;a&quot;</span> | <span class="hljs-string">&quot;b&quot;</span>&gt;; <span class="hljs-comment">// &quot;c&quot;</span>
+
+<span class="hljs-comment">// &#x679A;&#x4E3E;</span>
+<span class="hljs-keyword">enum</span> Color { Red = <span class="hljs-string">&apos;red&apos;</span>, Green = <span class="hljs-string">&apos;green&apos;</span>, Blue = <span class="hljs-string">&apos;blue&apos;</span> }
+<span class="hljs-keyword">type</span> T1 = Exclude&lt;Color, Color.Red&gt;
+
+<span class="hljs-keyword">const</span> col: Record&lt;T1, <span class="hljs-built_in">string</span>&gt; = {
+  <span class="hljs-string">&apos;green&apos;</span>: <span class="hljs-string">&apos;2&apos;</span>,
+  <span class="hljs-string">&apos;blue&apos;</span>: <span class="hljs-string">&apos;3&apos;</span>
+}
 </code></pre>
 <h3 id="14--extract-&#x2705;">14.  Extract &#x2705;</h3>
-<p>Extract<t, u=""> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x4ECE; T &#x4E2D;&#x63D0;&#x53D6;&#x51FA; U&#x3002;</t,></p>
-<pre><code class="lang-ts"><span class="hljs-keyword">type</span> T0 = Extract&lt;<span class="hljs-string">&quot;a&quot;</span> | <span class="hljs-string">&quot;b&quot;</span> | <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;a&quot;</span> | <span class="hljs-string">&quot;f&quot;</span>&gt;; <span class="hljs-comment">// &quot;a&quot;</span>
+<p><code>Extract&lt;T, U&gt;</code> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x4ECE; T &#x4E2D;&#x63D0;&#x53D6;&#x51FA; U&#x3002;</p>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x8054;&#x5408;&#x7C7B;&#x578B;</span>
+<span class="hljs-keyword">type</span> T0 = Extract&lt;<span class="hljs-string">&quot;a&quot;</span> | <span class="hljs-string">&quot;b&quot;</span> | <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;a&quot;</span> | <span class="hljs-string">&quot;f&quot;</span>&gt;; <span class="hljs-comment">// &quot;a&quot;</span>
 <span class="hljs-keyword">type</span> T1 = Extract&lt;<span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span> | (() =&gt; <span class="hljs-built_in">void</span>), <span class="hljs-built_in">Function</span>&gt;; <span class="hljs-comment">// () =&gt; void</span>
+
+<span class="hljs-comment">// &#x679A;&#x4E3E;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">enum</span> DeviceType {
+  HIVE = <span class="hljs-string">&apos;HIVE&apos;</span>,
+  ROBOT = <span class="hljs-string">&apos;ROBOT&apos;</span>,
+  ELEVATOR = <span class="hljs-string">&apos;ELEVATOR&apos;</span>,
+  GATE = <span class="hljs-string">&apos;GATE&apos;</span>,
+  SIGNAL = <span class="hljs-string">&apos;SIGNAL&apos;</span>,
+  DOCK = <span class="hljs-string">&apos;DOCK&apos;</span>,
+  GADGET = <span class="hljs-string">&apos;GADGET&apos;</span>,
+}
+
+<span class="hljs-keyword">type</span> CandlelightDeviceType = Extract&lt;DeviceType, DeviceType.ROBOT | DeviceType.HIVE&gt;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CandlelightDeviceTypeMap: Record&lt;CandlelightDeviceType, <span class="hljs-built_in">string</span>&gt; = {
+  ROBOT: <span class="hljs-string">&apos;&#x673A;&#x5668;&#x4EBA;&apos;</span>,
+  HIVE: <span class="hljs-string">&apos;&#x7BB1;&#x67DC;&apos;</span>,
+};
+
+<span class="hljs-keyword">type</span> RobotDeviceType = Extract&lt;DeviceType, DeviceType.ROBOT&gt;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SunlightDeviceTypeMap: Record&lt;RobotDeviceType, <span class="hljs-built_in">string</span>&gt; = {
+  ROBOT: <span class="hljs-string">&apos;&#x673A;&#x5668;&#x4EBA;&apos;</span>,
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> AuroraDeviceTypeMap: Record&lt;RobotDeviceType, <span class="hljs-built_in">string</span>&gt; = {
+  ROBOT: <span class="hljs-string">&apos;&#x673A;&#x5668;&#x4EBA;&apos;</span>,
+};
+
+<span class="hljs-keyword">type</span> CommonDeviceType = Extract&lt;DeviceType, DeviceType.ELEVATOR | DeviceType.GATE&gt;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CommonDeviceTypeMap: Record&lt;CommonDeviceType, <span class="hljs-built_in">string</span>&gt; = {
+  ELEVATOR: <span class="hljs-string">&apos;&#x7535;&#x68AF;&apos;</span>,
+  GATE: <span class="hljs-string">&apos;&#x95F8;&#x673A;&apos;</span>,
+};
 </code></pre>
 <h3 id="15--pick-&#x2705;">15.  Pick &#x2705;</h3>
-<p>Pick<t,u> &#x4ECE;T&#x4E2D;&#x6311;&#x51FA;U&#x7C7B;&#x578B;&#x3002;</t,u></p>
+<p><code>Pick&lt;T,U&gt;</code> &#x4ECE;T&#x4E2D;&#x6311;&#x51FA;U&#x7C7B;&#x578B;&#x3002;</p>
 <pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Test {
     name: <span class="hljs-built_in">string</span>;
     sex: <span class="hljs-built_in">number</span>;
@@ -2178,6 +2295,36 @@ loggingIdentity({length: <span class="hljs-number">10</span>, value: <span class
 <span class="hljs-keyword">type</span> Sex = Pick&lt;Test, <span class="hljs-string">&apos;sex&apos;</span>&gt;;
 
 <span class="hljs-keyword">const</span> a: Sex = { sex: <span class="hljs-number">1</span> };
+
+<span class="hljs-comment">// U &#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</span>
+
+<span class="hljs-keyword">enum</span> DeviceComponents {
+  DRIVER = <span class="hljs-string">&apos;DRIVER&apos;</span>,
+  JACK = <span class="hljs-string">&apos;JACK&apos;</span>,
+  MOTOR = <span class="hljs-string">&apos;MOTOR&apos;</span>,
+  BATTERY = <span class="hljs-string">&apos;BATTERY&apos;</span>,
+  SENSOR = <span class="hljs-string">&apos;SENSOR&apos;</span>,
+  COMMUNICATION = <span class="hljs-string">&apos;COMMUNICATION&apos;</span>,
+  NAVIGATION = <span class="hljs-string">&apos;NAVIGATION&apos;</span>,
+}
+
+<span class="hljs-keyword">const</span> DeviceComponentsMap: Record&lt;DeviceComponents, <span class="hljs-built_in">string</span>&gt; = {
+  DRIVER: <span class="hljs-string">&apos;&#x9A71;&#x52A8;&#x6A21;&#x5757;&apos;</span>,
+  JACK: <span class="hljs-string">&apos;&#x9876;&#x5347;&#x6A21;&#x5757;&apos;</span>,
+  MOTOR: <span class="hljs-string">&apos;&#x8FD0;&#x52A8;&#x72B6;&#x6001;&apos;</span>,
+  BATTERY: <span class="hljs-string">&apos;&#x7535;&#x6E90;&#x7BA1;&#x7406;&apos;</span>,
+  SENSOR: <span class="hljs-string">&apos;&#x4F20;&#x611F;&#x5668;&#x6570;&#x636E;&apos;</span>,
+  COMMUNICATION: <span class="hljs-string">&apos;&#x901A;&#x8BAF;&#x6A21;&#x5757;&apos;</span>,
+  NAVIGATION: <span class="hljs-string">&apos;&#x5BFC;&#x822A;&#x6A21;&#x5757;&apos;</span>,
+};
+
+pick(
+  DeviceComponentsMap, 
+  [
+    DeviceComponents.COMMUNICATION,
+    DeviceComponents.BATTERY,
+  ]
+)
 </code></pre>
 <h3 id="16-&#x6CDB;&#x578B;">16. &#x6CDB;&#x578B;</h3>
 <pre><code class="lang-ts">// &#x63A5;&#x53E3;&#x6CDB;&#x578B;
@@ -2592,7 +2739,7 @@ BUILD_ENV=testing
 </ol>
 <p><img src="../../../imgs/pasteJson.gif" alt="gif"></p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; tomgou 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2021-09-14 16:07:09
+2022-12-16 10:56:26
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -2637,7 +2784,7 @@ BUILD_ENV=testing
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TypeScript","level":"1.5.9","depth":2,"next":{"title":"Debounce & Throttle","level":"1.5.10","depth":2,"path":"pages/js/debounceThrottle/index.md","ref":"pages/js/debounceThrottle/index.md","articles":[]},"previous":{"title":"babel","level":"1.5.8","depth":2,"path":"pages/js/babel/index.md","ref":"pages/js/babel/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-pro","github","hide-element","chapter-fold","splitter","-lunr","-search","search-pro","copy-code-button","back-to-top-button","tbfed-pagefooter","popup","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy tomgou 2022","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://tomgou.github.io/algorithm-study/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"back-to-top-button":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"tomgou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"工作总结","language":"zh-hans","gitbook":"*","description":"日常工作记录"},"file":{"path":"pages/js/typescript/index.md","mtime":"2021-09-14T08:07:09.516Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-14T13:45:36.323Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TypeScript","level":"1.5.9","depth":2,"next":{"title":"Debounce & Throttle","level":"1.5.10","depth":2,"path":"pages/js/debounceThrottle/index.md","ref":"pages/js/debounceThrottle/index.md","articles":[]},"previous":{"title":"babel","level":"1.5.8","depth":2,"path":"pages/js/babel/index.md","ref":"pages/js/babel/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-pro","github","hide-element","chapter-fold","splitter","-lunr","-search","search-pro","copy-code-button","back-to-top-button","tbfed-pagefooter","popup","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy tomgou 2022","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://tomgou.github.io/algorithm-study/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"back-to-top-button":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"tomgou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"工作总结","language":"zh-hans","gitbook":"*","description":"日常工作记录"},"file":{"path":"pages/js/typescript/index.md","mtime":"2022-12-16T02:56:26.945Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-09T09:38:14.992Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

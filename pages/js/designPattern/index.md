@@ -523,4 +523,150 @@ console.log(res)
 
 #### 迭代器模式
 
+> 从一个数据集合中按照一定顺序，不断地取数据的过程
+
+> 工作中的实际应用案例：循环动画，从第一个 next() 开始，循环调用，从而将动画抽离成一个配置文件，实现用户自定义动画的功能
+
+```ts
+import { ref } from 'vue'
+import gsap from 'gsap'
+import { controls } from './controls'
+import { camera } from './three'
+import { task } from '../config/task'
+import { selectedValue } from './webWorker/index'
+
+const task = [
+  {
+    type: 'screen',
+    target: true,
+    duration: 0.5
+  },
+  {
+    type: 'switch',
+    target: 'floor_0'
+  },
+  {
+    type: 'gsap',
+    target: controls.target,
+    obj: {
+      x: 0,
+      y: 0,
+      z: 0
+    },
+    duration: 1
+  },
+  {
+    type: 'rotate',
+    duration: 30
+  },
+  {
+    type: 'switch',
+    target: 'floor_1'
+  },
+  {
+    type: 'gsap',
+    target: controls.target,
+    obj: {
+      x: -600,
+      y: 0,
+      z: 500
+    },
+    duration: 4
+  }
+]
+
+const isShowModel = ref(true)
+const isShowDash = ref(true)
+
+const gsapPromise = (property: any, obj: any, duration: number) => {
+  return new Promise((resolve, reject) => {
+    gsap.to(property, {
+      ...obj,
+      duration,
+      repeat: 0,
+      yoyo: true,
+      onComplete: () => {
+        resolve(1)
+      }
+    })
+  })
+}
+
+const rotatePromise = (duration: number) => {
+  return new Promise((resolve, reject) => {
+    controls.autoRotate = true
+    gsap.delayedCall(duration, () => {
+      controls.autoRotate = false
+      resolve(1)
+    })
+  })
+}
+
+const switchFloorPromise = (target: string) => {
+  return new Promise((resolve, reject) => {
+    selectedValue.value = target
+    gsap.delayedCall(1, () => {
+      resolve(1)
+    })
+  })
+}
+
+const switchScreenPromise = (target: boolean, duration: number) => {
+  return new Promise((resolve, reject) => {
+    isShowModel.value = target
+    isShowDash.value = !target
+    gsap.delayedCall(duration, () => {
+      resolve(1)
+    })
+  })
+}
+
+let taskGenerator: any = null
+
+function* generatorEach(arr: any[]) {
+  for (const [index, value] of arr.entries()) {
+    yield (async () => {
+      const { type, target, obj, duration } = value
+      // 楼层模型切换
+      if (type === 'switch') {
+        await switchFloorPromise(target)
+      // 大屏切换
+      } else if (type === 'screen') {
+        await switchScreenPromise(target, duration)
+      // 位置切换
+      } else if (type === 'gsap') {
+        await gsapPromise(target, obj, duration)
+      // 场景旋转
+      } else if (type === 'rotate') {
+        await rotatePromise(duration)
+      }
+      const { done } = taskGenerator.next()
+      if (done) {
+        taskGenerator = generatorEach(task)
+        taskGenerator.next()
+      }
+    })()
+  }
+}
+
+const animation = async () => {
+  if (gsap.globalTimeline.paused()) {
+    location.reload()
+    controls.autoRotate = true
+  } else {
+    controls.reset()
+    controls.autoRotate = false
+    taskGenerator = generatorEach(task)
+    taskGenerator.next()
+  }
+}
+
+const rest = () => {
+  controls.autoRotate = false
+  gsap.globalTimeline.pause()
+}
+
+export { animation, rest, isShowModel, isShowDash }
+```
+
 后面继续。。。

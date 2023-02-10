@@ -163,7 +163,7 @@ Readonly<T> 的作用是将某个类型所有属性变为只读属性，也就�
 
 ### 12. Record ✅
 
-Record<K extends keyof any, T> 的作用是将 K 中所有的属性的值转化为 T 类型。
+`Record<K extends keyof any, T>` 的作用是将 K 中所有的属性的值转化为 T 类型。
 
 ```ts
 // 联合类型
@@ -193,30 +193,133 @@ const x: Record<Page, PageInfo> = {
   0: { title: '123' },
   1: { title: '123' }
 }
+
+enum DeviceComponents {
+  DRIVER = 'DRIVER',
+  JACK = 'JACK',
+  MOTOR = 'MOTOR',
+  BATTERY = 'BATTERY',
+  SENSOR = 'SENSOR',
+  COMMUNICATION = 'COMMUNICATION',
+  NAVIGATION = 'NAVIGATION',
+}
+
+const DeviceComponentsMap: Record<DeviceComponents, string> = {
+  DRIVER: '驱动模块',
+  JACK: '顶升模块',
+  MOTOR: '运动状态',
+  BATTERY: '电源管理',
+  SENSOR: '传感器数据',
+  COMMUNICATION: '通讯模块',
+  NAVIGATION: '导航模块',
+};
+
+// 普通函数
+
+function transform<T extends Record<string, any>> (
+  iteratee: (node: T) => any,
+  treeData: T[],
+  childrenKey: keyof T = 'children',
+) {
+  return treeData.map((node) => {
+    const result = iteratee(node);
+    const children = result[childrenKey];
+
+    if (Array.isArray(children)) {
+      result[childrenKey] = transform(iteratee, children, childrenKey);
+    }
+
+    return result;
+  });
+}
+
+// 箭头函数
+
+const transform2 = <T extends Record<string, string | number>>(
+  iteratee: (node: T) => any,
+  treeData: T[],
+  childrenKey: keyof T = 'children',
+) => {
+  return treeData.map((node) => {
+    const result = iteratee(node);
+    const children = result[childrenKey];
+
+    if (Array.isArray(children)) {
+      result[childrenKey] = transform2(iteratee, children, childrenKey);
+    }
+
+    return result;
+  });
+}
 ```
 
 ### 13.  Exclude ✅
 
-Exclude<T, U> 的作用是将某个类型中属于另一个的类型移除掉。
+`Exclude<T, U>` 的作用是将某个类型中属于另一个的类型移除掉。
 
 ```ts
+// 联合类型
 type T0 = Exclude<"a" | "b" | "c", "a">; // "b" | "c"
 type T1 = Exclude<"a" | "b" | "c", "a" | "b">; // "c"
+
+// 枚举
+enum Color { Red = 'red', Green = 'green', Blue = 'blue' }
+type T1 = Exclude<Color, Color.Red>
+
+const col: Record<T1, string> = {
+  'green': '2',
+  'blue': '3'
+}
 ```
 
 ### 14.  Extract ✅
 
-Extract<T, U> 的作用是从 T 中提取出 U。
+`Extract<T, U>` 的作用是从 T 中提取出 U。
 
 ```ts
+// 联合类型
 type T0 = Extract<"a" | "b" | "c", "a" | "f">; // "a"
 type T1 = Extract<string | number | (() => void), Function>; // () => void
 
+// 枚举
+export enum DeviceType {
+  HIVE = 'HIVE',
+  ROBOT = 'ROBOT',
+  ELEVATOR = 'ELEVATOR',
+  GATE = 'GATE',
+  SIGNAL = 'SIGNAL',
+  DOCK = 'DOCK',
+  GADGET = 'GADGET',
+}
+
+type CandlelightDeviceType = Extract<DeviceType, DeviceType.ROBOT | DeviceType.HIVE>
+
+export const CandlelightDeviceTypeMap: Record<CandlelightDeviceType, string> = {
+  ROBOT: '机器人',
+  HIVE: '箱柜',
+};
+
+type RobotDeviceType = Extract<DeviceType, DeviceType.ROBOT>
+
+export const SunlightDeviceTypeMap: Record<RobotDeviceType, string> = {
+  ROBOT: '机器人',
+};
+
+export const AuroraDeviceTypeMap: Record<RobotDeviceType, string> = {
+  ROBOT: '机器人',
+};
+
+type CommonDeviceType = Extract<DeviceType, DeviceType.ELEVATOR | DeviceType.GATE>
+
+export const CommonDeviceTypeMap: Record<CommonDeviceType, string> = {
+  ELEVATOR: '电梯',
+  GATE: '闸机',
+};
 ```
 
 ### 15.  Pick ✅
 
-Pick<T,U> 从T中挑出U类型。
+`Pick<T,U>` 从T中挑出U类型。
 
 ```ts
 interface Test {
@@ -228,6 +331,36 @@ interface Test {
 type Sex = Pick<Test, 'sex'>;
 
 const a: Sex = { sex: 1 };
+
+// U 可以是一个数组
+
+enum DeviceComponents {
+  DRIVER = 'DRIVER',
+  JACK = 'JACK',
+  MOTOR = 'MOTOR',
+  BATTERY = 'BATTERY',
+  SENSOR = 'SENSOR',
+  COMMUNICATION = 'COMMUNICATION',
+  NAVIGATION = 'NAVIGATION',
+}
+
+const DeviceComponentsMap: Record<DeviceComponents, string> = {
+  DRIVER: '驱动模块',
+  JACK: '顶升模块',
+  MOTOR: '运动状态',
+  BATTERY: '电源管理',
+  SENSOR: '传感器数据',
+  COMMUNICATION: '通讯模块',
+  NAVIGATION: '导航模块',
+};
+
+pick(
+  DeviceComponentsMap, 
+  [
+    DeviceComponents.COMMUNICATION,
+    DeviceComponents.BATTERY,
+  ]
+)
 ```
 
 ### 16. 泛型

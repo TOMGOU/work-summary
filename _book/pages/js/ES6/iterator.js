@@ -3,16 +3,17 @@ const obj = {
   [Symbol.iterator]: () => {
     return {
       next: () => {
-        if (obj.count < 10) {
+        if (obj.count < 20) {
           obj.count++
           return {
             value: obj.count,
             done: false
           }
         } else {
+          obj.count = 0
           return {
-            value: undefined,
-            done: true
+            value: 0,
+            done: false
           }
         }
       }
@@ -20,15 +21,22 @@ const obj = {
   }
 }
 
-// for (let item of obj) {
-//   console.log({ item })
-// }
-
-function * generator () {
-  const arr = [1, 2, 3, 4]
-  for (item of arr) {
-    yield console.log(item)
-  }
+for (let item of obj) {
+  console.log({ item })
 }
 
-const g = generator()
+// function * generator () {
+//   const arr = [1, 2, 3, 4]
+//   for (item of arr) {
+//     yield console.log(item)
+//   }
+// }
+
+// const g = generator()
+// g.next()
+// g.next()
+// g.next()
+// g.next()
+// g.next()
+// g.next()
+// g.next()
