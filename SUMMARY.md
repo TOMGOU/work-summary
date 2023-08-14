@@ -21,6 +21,7 @@
     * [issue模板](pages/experience/issue/index.md)
     * [webp](pages/experience/webp/index.md)
     * [markdown](pages/experience/markdown/index.md)
+    * [memoryAnalysis](pages/experience/memoryAnalysis/index.md)
 * [CSS](pages/css/index.md)
     * [提升用户体验细节](pages/css/UE/index.md)
     * [flex最后一行左对齐问题](pages/css/flex/index.md)
@@ -124,7 +125,7 @@
     * [按需引入](pages/interview/import/index.md)
     * [总结](pages/interview/projects/index.md)
 * [Others](pages/others/index.md)
-    * [GitLabCICD](pages/others/gitLab/index.md)
+    * [GitLab CI/CD](pages/others/gitlab/index.md)
     * [云服务器](pages/others/linux/index.md)
     * [mysql](pages/others/mysql/index.md)
     * [微信小程序云开发](pages/others/cloud/index.md)
@@ -137,4 +138,5 @@
     * [iTerm](pages/others/iTerm/index.md)
     * [chrome](pages/others/chrome/index.md)
     * [husky](pages/others/husky/index.md)
+    * [typora 破解](pages/others/typora/index.md)
 

@@ -16,7 +16,8 @@
     "back-to-top-button",
     "tbfed-pagefooter",
     "popup",
-    "mermaid-gb3"
+    "mermaid-gb3",
+    "anchor-navigation-ex"
   ],
   "pluginsConfig": {
     "github": {

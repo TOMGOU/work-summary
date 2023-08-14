@@ -134,3 +134,93 @@ environment: 定义环境变量和配置；
 depends_on: 定义依赖关系, 也就是容器启动顺序；
 
 ```
+
+# docker 实战
+
+## 1.创建 Dockerfile 文件
+
+```Dockerfile
+FROM nginx
+
+COPY dist/ /usr/share/nginx/html
+
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+```
+
+## 2.nginx 配置文件
+
+```nginx
+server {
+    listen       80;
+    server_name  localhost;
+
+    root /usr/share/nginx/html/;
+    index index.html index.htm;
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location = /health {
+        default_type  text/plain;
+        access_log  off;
+        error_log  off;
+        return 200 'ok\n';
+    }
+
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
+```
+
+- 监听 80 端口，并设置虚拟主机为 localhost。
+- 将网站根目录设置为 /usr/share/nginx/html，并设置默认文档为 index.html 或 index.htm。
+- 配置了一个 location 规则用于处理除了 /health 之外的所有请求，该规则将尝试匹配请求的文件，如果不存在则重定向到 /index.html。
+- 配置了另一个 location 规则用于处理 /health 请求，并返回一个 200 OK 响应。
+- 配置了一个自定义错误页面 /50x.html 用于处理 500、502、503、504 等错误，如果出现这些错误则会显示该页面。
+
+## 3.构建镜像
+
+```js
+docker build -t nginx-test . 
+```
+
+## 4.启动镜像容器
+
+```js
+docker run -p 8080:80 -it nginx-test 
+```
+
+## 5.浏览器访问页面
+
+http://localhost:8080/
+
+
+## 6.编写 docker-compose.yml
+
+```yml
+version: '3'
+services:
+  web:
+    image: nginx-test
+    volumes:
+      - ./dist:/usr/share/nginx/html
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
+```
+
+## 7.docker-compose 启动容器
+
+```js
+docker-compose up
+```
+
+## 8.浏览器访问页面
+
+http://localhost:8080/

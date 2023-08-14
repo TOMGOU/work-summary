@@ -41,3 +41,235 @@ yarn create vite my-project
 - `import { debounce } from 'lodash'` 导入一个命名函数时候，并不是只下载包含这个函数的文件，而是有一个依赖图，一共发送了651个请求。`Vite` 为了优化这个情况，利用 `esbuild` 在启动的时候预先把 `debounce` 用到的所有内部模块全部打包成一个`bundle`，这样就浏览器在请求 `debounce` 时，便只需要发送一次请求了
 
 - 当 `Vite` 遇到一个 .vue 后缀的文件时。由于 .vue 模板文件的特殊性，它被拆分成 `template`, `css`, `script` 模块三个模块进行分别处理。最后会对 `script`, `template`, `css` 发送多个请求获取。`App.vue?type=template` 获取 template, `App.vue?type=style` 获取 style。
+
+## vite 插件
+
+### vite 插件钩子
+
+### 通用钩子
+
+* 在服务器启动时被调用：
+
+  - options
+  - buildStart
+
+  ```js
+  export default (enforce: 'pre' | 'post') => {
+    return {
+      name: 'test',
+      enforce,
+      options(id) {
+        console.log('options', { id })
+      },
+      async buildStart(id) {
+        console.log('buildStart', { id })
+      }
+    }
+  }
+  ```
+
+* 在每个传入模块请求时被调用：
+
+  - resolveId + load：虚拟模块，在 node 环境下处理文件然后将数据传给浏览器环境。
+  - transform：文件内容语法转换
+
+  ```js
+  export default (enforce: 'pre' | 'post') => {
+    const virtualModuleId = 'virtual:floor'
+    const resolvedVirtualModuleId = '\0' + virtualModuleId
+    return {
+      name: 'generate',
+      enforce,
+      resolveId(id) {
+        if (id === virtualModuleId) {
+          return resolvedVirtualModuleId
+        }
+      },
+      load(id) {
+        if (id === resolvedVirtualModuleId) {
+          const gltfPath = `public/3D/gltf/${process.env.place}/inside`
+          const regex = /\d+/
+          const fold = fs
+            .readdirSync(gltfPath)
+            .sort((a: string, b: string) => Number(a.match(regex)) - Number(b.match(regex)))
+            .join("','")
+          return `export const msg = ['${fold}']`
+        }
+      }
+      transform(src, id) {
+        if (src.includes('.glb')) console.log('transform', { src, id })
+      }
+    }
+  }
+  ```
+
+* 服务器关闭时被调用：
+
+  - buildEnd
+  - closeBundle
+
+  ```js
+  export default (enforce: 'pre' | 'post') => {
+    return {
+      name: 'delete',
+      enforce,
+      closeBundle() {
+        const gltfPath = `dist/${mode}/${process.env.place}/3D/gltf`
+        fs.readdirSync(gltfPath)
+          // 过滤掉机器人柜子等公用模型文件
+          .filter((name: string) => !name.includes('.'))
+          // 过滤掉非本医院的模型文件夹
+          .filter((foldname: string) => foldname !== process.env.place)
+          // 删除其他医院的模型文件及文件夹
+          .forEach((fold: string) => fs.removeSync(`${gltfPath}/${fold}`))
+      }
+    }
+  }
+  ```
+
+##### Vite 独有钩子
+
+- config
+
+> 在 Vite 配置文件被解析后，对配置进行更改或扩展。这个钩子接收一个 ResolvedConfig 对象，该对象表示 Vite 的完整配置，可以更改其中的选项、添加插件、修改插件配置等。
+
+```js
+  export default (enforce: 'pre' | 'post') => {
+    return {
+      name: 'test',
+      enforce,
+      config(config, { command }) {
+        console.log('config', { config, command })
+         if (command === 'build') {
+          config.root = 'foo'
+        }
+      }
+    }
+  }
+  ```
+
+- configResolved
+
+> 在 Vite 解析完配置后，修改、扩展配置的机会。该钩子接收一个 ResolvedConfig 类型的参数，该参数包含了 Vite 解析配置后的详细信息，包括各种默认值和合并后的值。
+
+- configureServer
+
+> 在 Vite 启动开发服务器前，修改服务器配置的机会。该钩子接收一个 ServerOptions 类型的参数，该参数包含了 Vite 配置开发服务器的所有选项。你可以在该钩子中修改服务器选项，例如配置代理、自定义中间件等。
+
+- configurePreviewServer
+
+> 在 Vite 启动 HMR websocket 服务器前，修改服务器配置的机会。该钩子与 configureServer 类似，但它仅适用于 HMR websocket 服务器。
+
+- transformIndexHtml
+
+> 用于在生成 HTML 文件之前对 HTML 内容进行转换处理。例如：改变 title 或者添加 script 引入。
+
+```js
+const htmlPlugin = () => {
+  return {
+    name: 'html-transform',
+    transformIndexHtml(html) {
+      return html.replace(
+        /<title>(.*?)<\/title>/,
+        `<title>Title replaced!</title>`,
+      )
+    },
+  }
+}
+```
+
+- handleHotUpdate
+
+> 当一个模块发生变化时，Vite 会检测到这个变化，并调用 handleHotUpdate 函数来处理更新。这个函数会根据变化的模块信息，以及其它相关的信息，来生成一个用于更新浏览器页面的消息，从而实现模块的热更新。
+
+### vite 插件实际案例
+
+#### 根据环境变量动态生成数据
+
+- 插件内容
+
+```js
+import fs from 'fs-extra'
+
+export default (enforce: 'pre' | 'post') => {
+  const virtualModuleId = 'virtual:floor'
+  const resolvedVirtualModuleId = '\0' + virtualModuleId
+  return {
+    name: 'generate',
+    enforce,
+    resolveId(id) {
+      if (id === virtualModuleId) {
+        return resolvedVirtualModuleId
+      }
+    },
+    load(id) {
+      if (id === resolvedVirtualModuleId) {
+        const gltfPath = `public/3D/gltf/${process.env.place}/inside`
+        const regex = /\d+/
+        const fold = fs
+          .readdirSync(gltfPath)
+          .sort((a: string, b: string) => Number(a.match(regex)) - Number(b.match(regex)))
+          .join("','")
+        return `export const msg = ['${fold}']`
+      }
+    }
+  }
+}
+```
+
+- 插件使用
+
+```js
+import { msg } from 'virtual:floor'
+
+const floor = msg.map((item: string) => ({
+  label: `${item.match(/\d+/)}L`,
+  value: item.split('.')[0],
+  disabled: true,
+  percentage: 10
+}))
+
+console.log(floor)
+```
+
+#### 根据环境变量动态删除多余的模型文件
+
+- 插件内容
+
+```js
+import fs from 'fs-extra'
+
+export default (enforce: 'pre' | 'post', mode) => {
+  return {
+    name: 'delete',
+    enforce,
+    closeBundle() {
+      const gltfPath = `dist/${mode}/${process.env.place}/3D/gltf`
+      fs.readdirSync(gltfPath)
+        // 过滤掉机器人柜子等公用模型文件
+        .filter((name: string) => !name.includes('.'))
+        // 过滤掉非本医院的模型文件夹
+        .filter((foldname: string) => foldname !== process.env.place)
+        // 删除其他医院的模型文件及文件夹
+        .forEach((fold: string) => fs.removeSync(`${gltfPath}/${fold}`))
+    }
+  }
+}
+
+```
+
+- 插件使用
+
+```js
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import deletePlugin from './plugins/vite-plugin-delete'
+import generatePlugin from './plugins/vite-plugin-generate'
+
+export default ({ mode }) =>
+  defineConfig({
+    ...
+    plugins: [vue(), generatePlugin('pre'), deletePlugin('post', mode)],
+    ...
+  })
+```

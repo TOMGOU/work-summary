@@ -72,4 +72,22 @@ ReactDOM.render(
 );
 ```
 
+```js
+import React, { Suspense } from 'react';
+
+const LazyComponent = React.lazy(() => import('./LazyComponent'));
+
+const App = () => {
+  return (
+    <div>
+      <h1>My App</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
+    </div>
+  );
+};
+
+```
+
 ## 实现原理
