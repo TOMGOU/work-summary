@@ -1,0 +1,2593 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>reactive · 工作总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="tomgou">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../eventEmitter/" />
+    
+    
+    <link rel="prev" href="../diff/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    工作总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../gitbook/">
+            
+                <a href="../../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../gitbook/mermaid/">
+            
+                <a href="../../gitbook/mermaid/">
+            
+                    
+                    Mermaid-gb3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../gitbook/markdown/">
+            
+                <a href="../../gitbook/markdown/">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../experience/">
+            
+                <a href="../../experience/">
+            
+                    
+                    KeyPoints
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../experience/webView/">
+            
+                <a href="../../experience/webView/">
+            
+                    
+                    Web-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../experience/pageMeta/">
+            
+                <a href="../../experience/pageMeta/">
+            
+                    
+                    Page-Meta
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../experience/PDFPreview/">
+            
+                <a href="../../experience/PDFPreview/">
+            
+                    
+                    PDF-Preview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../experience/subscribeMessage/">
+            
+                <a href="../../experience/subscribeMessage/">
+            
+                    
+                    模板消息订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../experience/channelLive/">
+            
+                <a href="../../experience/channelLive/">
+            
+                    
+                    跳转视频号和直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../experience/internationalization/">
+            
+                <a href="../../experience/internationalization/">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../experience/biEcharts/">
+            
+                <a href="../../experience/biEcharts/">
+            
+                    
+                    BI-Echarts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../experience/lowCode/">
+            
+                <a href="../../experience/lowCode/">
+            
+                    
+                    低代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../experience/taroWepy/">
+            
+                <a href="../../experience/taroWepy/">
+            
+                    
+                    wepy->taro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../experience/miniprogramCi/">
+            
+                <a href="../../experience/miniprogramCi/">
+            
+                    
+                    miniprogram-ci
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../experience/fullScreen/">
+            
+                <a href="../../experience/fullScreen/">
+            
+                    
+                    full-screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../experience/silentLogin/">
+            
+                <a href="../../experience/silentLogin/">
+            
+                    
+                    静默登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../experience/timeDiff/">
+            
+                <a href="../../experience/timeDiff/">
+            
+                    
+                    时间差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../../experience/issue/">
+            
+                <a href="../../experience/issue/">
+            
+                    
+                    issue模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../../experience/webp/">
+            
+                <a href="../../experience/webp/">
+            
+                    
+                    webp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../../experience/markdown/">
+            
+                <a href="../../experience/markdown/">
+            
+                    
+                    markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../../experience/memoryAnalysis/">
+            
+                <a href="../../experience/memoryAnalysis/">
+            
+                    
+                    memoryAnalysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../css/">
+            
+                <a href="../../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../css/UE/">
+            
+                <a href="../../css/UE/">
+            
+                    
+                    提升用户体验细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../css/flex/">
+            
+                <a href="../../css/flex/">
+            
+                    
+                    flex最后一行左对齐问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../css/fixed/">
+            
+                <a href="../../css/fixed/">
+            
+                    
+                    神奇的固定定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../css/layout/">
+            
+                <a href="../../css/layout/">
+            
+                    
+                    布局与居中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../css/pollution/">
+            
+                <a href="../../css/pollution/">
+            
+                    
+                    样式污染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../css/img/">
+            
+                <a href="../../css/img/">
+            
+                    
+                    图片尺寸
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../css/ipxFit/">
+            
+                <a href="../../css/ipxFit/">
+            
+                    
+                    ipx适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../css/radio/">
+            
+                <a href="../../css/radio/">
+            
+                    
+                    radio样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../css/BFC/">
+            
+                <a href="../../css/BFC/">
+            
+                    
+                    BFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../../css/REM/">
+            
+                <a href="../../css/REM/">
+            
+                    
+                    REM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../js/">
+            
+                <a href="../../js/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../js/performance/">
+            
+                <a href="../../js/performance/">
+            
+                    
+                    性能优化细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../js/promise/">
+            
+                <a href="../../js/promise/">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../js/proto/">
+            
+                <a href="../../js/proto/">
+            
+                    
+                    原型及原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../js/module/">
+            
+                <a href="../../js/module/">
+            
+                    
+                    模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../js/ES6/">
+            
+                <a href="../../js/ES6/">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../js/RegExp/">
+            
+                <a href="../../js/RegExp/">
+            
+                    
+                    正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../js/callApplyBind/">
+            
+                <a href="../../js/callApplyBind/">
+            
+                    
+                    call/apply/bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../js/babel/">
+            
+                <a href="../../js/babel/">
+            
+                    
+                    babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../js/typescript/">
+            
+                <a href="../../js/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../js/debounceThrottle/">
+            
+                <a href="../../js/debounceThrottle/">
+            
+                    
+                    Debounce & Throttle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../js/bitOperation/">
+            
+                <a href="../../js/bitOperation/">
+            
+                    
+                    Bit Operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../js/ajax/">
+            
+                <a href="../../js/ajax/">
+            
+                    
+                    Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../../js/designPattern/">
+            
+                <a href="../../js/designPattern/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../../js/eslint/">
+            
+                <a href="../../js/eslint/">
+            
+                    
+                    ESlint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../../js/test/">
+            
+                <a href="../../js/test/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../vueCli/">
+            
+                <a href="../vueCli/">
+            
+                    
+                    vue-cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../vueRouter/">
+            
+                <a href="../vueRouter/">
+            
+                    
+                    vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../vuex/">
+            
+                <a href="../vuex/">
+            
+                    
+                    vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../ssr/">
+            
+                <a href="../ssr/">
+            
+                    
+                    ssr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../diff/">
+            
+                <a href="../diff/">
+            
+                    
+                    diff
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    reactive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../eventEmitter/">
+            
+                <a href="../eventEmitter/">
+            
+                    
+                    eventBus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../nextTick/">
+            
+                <a href="../nextTick/">
+            
+                    
+                    nextTick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../decoration/">
+            
+                <a href="../decoration/">
+            
+                    
+                    decoration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../vue3/">
+            
+                <a href="../vue3/">
+            
+                    
+                    vue3新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../dom/">
+            
+                <a href="../dom/">
+            
+                    
+                    虚拟dom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../communication/">
+            
+                <a href="../communication/">
+            
+                    
+                    组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../react/">
+            
+                <a href="../../react/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../react/umiProComponents/">
+            
+                <a href="../../react/umiProComponents/">
+            
+                    
+                    umi + proComponents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../react/context/">
+            
+                <a href="../../react/context/">
+            
+                    
+                    context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../react/reactRouter/">
+            
+                <a href="../../react/reactRouter/">
+            
+                    
+                    react-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../react/reactRedux/">
+            
+                <a href="../../react/reactRedux/">
+            
+                    
+                    react-redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../react/hooks/">
+            
+                <a href="../../react/hooks/">
+            
+                    
+                    hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../react/portal/">
+            
+                <a href="../../react/portal/">
+            
+                    
+                    portal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../react/suspense/">
+            
+                <a href="../../react/suspense/">
+            
+                    
+                    suspense
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../react/sourceCode/">
+            
+                <a href="../../react/sourceCode/">
+            
+                    
+                    source-code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../react/reactNative/">
+            
+                <a href="../../react/reactNative/">
+            
+                    
+                    react-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../threeJS/">
+            
+                <a href="../../threeJS/">
+            
+                    
+                    threeJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../threeJS/Math/">
+            
+                <a href="../../threeJS/Math/">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../threeJS/Webgl/">
+            
+                <a href="../../threeJS/Webgl/">
+            
+                    
+                    Webgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../threeJS/Shader/">
+            
+                <a href="../../threeJS/Shader/">
+            
+                    
+                    Shader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../threeJS/Draco/">
+            
+                <a href="../../threeJS/Draco/">
+            
+                    
+                    Draco
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../threeJS/glTF/">
+            
+                <a href="../../threeJS/glTF/">
+            
+                    
+                    glTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../threeJS/CSS3DRender/">
+            
+                <a href="../../threeJS/CSS3DRender/">
+            
+                    
+                    CSS3DRender
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../threeJS/Raycaster/">
+            
+                <a href="../../threeJS/Raycaster/">
+            
+                    
+                    Raycaster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../../threeJS/MaterialReset/">
+            
+                <a href="../../threeJS/MaterialReset/">
+            
+                    
+                    MaterialReset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../../threeJS/Animation/">
+            
+                <a href="../../threeJS/Animation/">
+            
+                    
+                    Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../../threeJS/GuiControls/">
+            
+                <a href="../../threeJS/GuiControls/">
+            
+                    
+                    GuiControls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../../threeJS/Panorama/">
+            
+                <a href="../../threeJS/Panorama/">
+            
+                    
+                    Panorama
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../../threeJS/KeyboardControl/">
+            
+                <a href="../../threeJS/KeyboardControl/">
+            
+                    
+                    KeyboardControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../../threeJS/Audio/">
+            
+                <a href="../../threeJS/Audio/">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../../threeJS/Encoding/">
+            
+                <a href="../../threeJS/Encoding/">
+            
+                    
+                    sRGBEncoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../node/nvm/">
+            
+                <a href="../../node/nvm/">
+            
+                    
+                    nvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../node/fs/">
+            
+                <a href="../../node/fs/">
+            
+                    
+                    fs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../node/path/">
+            
+                <a href="../../node/path/">
+            
+                    
+                    path
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../node/http/">
+            
+                <a href="../../node/http/">
+            
+                    
+                    http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../node/https/">
+            
+                <a href="../../node/https/">
+            
+                    
+                    https
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../node/events/">
+            
+                <a href="../../node/events/">
+            
+                    
+                    events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../../node/childProcess/">
+            
+                <a href="../../node/childProcess/">
+            
+                    
+                    child_process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../node/stream/">
+            
+                <a href="../../node/stream/">
+            
+                    
+                    stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../node/buffer/">
+            
+                <a href="../../node/buffer/">
+            
+                    
+                    buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../../node/dependency/">
+            
+                <a href="../../node/dependency/">
+            
+                    
+                    依赖管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../webpack/">
+            
+                <a href="../../webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../webpack/basic/">
+            
+                <a href="../../webpack/basic/">
+            
+                    
+                    基础配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../webpack/optimize/">
+            
+                <a href="../../webpack/optimize/">
+            
+                    
+                    optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../webpack/plugin/">
+            
+                <a href="../../webpack/plugin/">
+            
+                    
+                    webpack-plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../webpack/loader/">
+            
+                <a href="../../webpack/loader/">
+            
+                    
+                    webpack-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../webpack/hmr/">
+            
+                <a href="../../webpack/hmr/">
+            
+                    
+                    hotModuleReplace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../webpack/webpack5/">
+            
+                <a href="../../webpack/webpack5/">
+            
+                    
+                    webpack5新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../webpack/vite/">
+            
+                <a href="../../webpack/vite/">
+            
+                    
+                    vite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../webpack/ndb/">
+            
+                <a href="../../webpack/ndb/">
+            
+                    
+                    ndb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../../webpack/websocket/">
+            
+                <a href="../../webpack/websocket/">
+            
+                    
+                    websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../../webpack/rollup/">
+            
+                <a href="../../webpack/rollup/">
+            
+                    
+                    rollup与soucemap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../../webpack/gulp/">
+            
+                <a href="../../webpack/gulp/">
+            
+                    
+                    gulp与yargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../codeReview/">
+            
+                <a href="../../codeReview/">
+            
+                    
+                    Code Review
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../codeReview/cyclomaticComplexity/">
+            
+                <a href="../../codeReview/cyclomaticComplexity/">
+            
+                    
+                    Cyclomatic Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../projects/">
+            
+                <a href="../../projects/">
+            
+                    
+                    Projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../interview/">
+            
+                <a href="../../interview/">
+            
+                    
+                    Interview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../interview/eventLoop/">
+            
+                <a href="../../interview/eventLoop/">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../interview/deepClone/">
+            
+                <a href="../../interview/deepClone/">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../interview/CDN/">
+            
+                <a href="../../interview/CDN/">
+            
+                    
+                    CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../interview/safety/">
+            
+                <a href="../../interview/safety/">
+            
+                    
+                    网络安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../interview/http/">
+            
+                <a href="../../interview/http/">
+            
+                    
+                    http问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../interview/mqtt/">
+            
+                <a href="../../interview/mqtt/">
+            
+                    
+                    mqtt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../../interview/Internet/">
+            
+                <a href="../../interview/Internet/">
+            
+                    
+                    url输入到展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../../interview/typescript/">
+            
+                <a href="../../interview/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../../interview/BFC/">
+            
+                <a href="../../interview/BFC/">
+            
+                    
+                    BFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" data-path="../../interview/import/">
+            
+                <a href="../../interview/import/">
+            
+                    
+                    按需引入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.11" data-path="../../interview/projects/">
+            
+                <a href="../../interview/projects/">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../others/">
+            
+                <a href="../../others/">
+            
+                    
+                    Others
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../others/gitlab/">
+            
+                <a href="../../others/gitlab/">
+            
+                    
+                    GitLab CI/CD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../../others/linux/">
+            
+                <a href="../../others/linux/">
+            
+                    
+                    云服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../../others/mysql/">
+            
+                <a href="../../others/mysql/">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../../others/cloud/">
+            
+                <a href="../../others/cloud/">
+            
+                    
+                    微信小程序云开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../../others/lerna/">
+            
+                <a href="../../others/lerna/">
+            
+                    
+                    lerna
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../../others/charles/">
+            
+                <a href="../../others/charles/">
+            
+                    
+                    charles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../../others/whistle/">
+            
+                <a href="../../others/whistle/">
+            
+                    
+                    whistle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../../others/docker/">
+            
+                <a href="../../others/docker/">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../../others/git/">
+            
+                <a href="../../others/git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="../../others/slidev/">
+            
+                <a href="../../others/slidev/">
+            
+                    
+                    sli.dev
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="../../others/iTerm/">
+            
+                <a href="../../others/iTerm/">
+            
+                    
+                    iTerm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.12" data-path="../../others/chrome/">
+            
+                <a href="../../others/chrome/">
+            
+                    
+                    chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.13" data-path="../../others/husky/">
+            
+                <a href="../../others/husky/">
+            
+                    
+                    husky
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.14" data-path="../../others/typora/">
+            
+                <a href="../../others/typora/">
+            
+                    
+                    typora 破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >reactive</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vue-reactive"><b>1. </b>vue-reactive</a></li><ul><li><span class="title-icon "></span><a href="#vue20"><b>1.1. </b>vue2.0</a></li><ul><li><span class="title-icon "></span><a href="#objectdefinepropertyobj-key-handler"><b>1.1.1. </b>Object.defineProperty(obj, key, handler)</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;"><b>1.1.2. </b>&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;</a></li></ul><li><span class="title-icon "></span><a href="#vue30"><b>1.2. </b>vue3.0</a></li><li><span class="title-icon "></span><a href="#new-proxyobj-handler"><b>1.3. </b>new Proxy(obj, handler)</a></li></ul></ul></div><a href="#vue-reactive" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vue-reactive"><a name="vue-reactive" class="anchor-navigation-ex-anchor" href="#vue-reactive"><i class="fa fa-link" aria-hidden="true"></i></a>1. vue-reactive</h1>
+<blockquote>
+<p>Observer &#x52AB;&#x6301; data &#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;get &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5411; Dep &#x4E2D;&#x8BA2;&#x9605; Watcher&#xFF0C;set &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BA9; Dep &#x8C03;&#x7528;notify &#x4E8B;&#x4EF6;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x89E6;&#x53D1; Watcher &#x4E2D;&#x7684; update &#x65B9;&#x6CD5; &#xFF0C;&#x66F4;&#x65B0;&#x7ED1;&#x5B9A;&#x4E86;&#x5BF9;&#x5E94; data &#x6570;&#x636E;&#x7684; dom&#x3002;Compiler &#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x89E3;&#x6790; vue &#x7279;&#x6709;&#x7684;&#x4E00;&#x4E9B;&#x6307;&#x4EE4;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A; v-model&#x3001;@click&#xFF0C;Watcher &#x5C31;&#x662F;&#x5728; Compiler &#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x3002;</p>
+<p>Observer &#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x52AB;&#x6301; data &#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>Dep &#x8D1F;&#x8D23;&#x4F9D;&#x8D56;&#x7684;&#x641C;&#x96C6;&#x3002;</p>
+<p>Compile &#x662F;&#x7F16;&#x8BD1;&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x6307;&#x4EE4;&#x3002;</p>
+<p>Watcher &#x662F; data &#x6570;&#x636E;&#x4E0E; dom &#x5143;&#x7D20;&#x8FDE;&#x63A5;&#x7684;&#x6865;&#x6881;&#x3002;</p>
+</blockquote>
+<h2 id="vue20"><a name="vue20" class="anchor-navigation-ex-anchor" href="#vue20"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. vue2.0</h2>
+<blockquote>
+<p>Object.defineProperty</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Vue</span> </span>{
+  <span class="hljs-keyword">constructor</span>(options = {}) {
+    <span class="hljs-keyword">this</span>.$options = options
+    <span class="hljs-keyword">this</span>.$el = <span class="hljs-keyword">typeof</span> options.el === <span class="hljs-string">&apos;string&apos;</span> ? <span class="hljs-built_in">document</span>.querySelector(options.el) : options.el
+    <span class="hljs-keyword">this</span>.$data = options.data
+    <span class="hljs-keyword">this</span>.$methods = options.methods
+
+    <span class="hljs-keyword">this</span>.proxy(<span class="hljs-keyword">this</span>.$data)
+
+    <span class="hljs-comment">// observer &#x62E6;&#x622A; this.$data</span>
+    <span class="hljs-keyword">new</span> Observer(<span class="hljs-keyword">this</span>.$data)
+
+    <span class="hljs-keyword">new</span> Compiler(<span class="hljs-keyword">this</span>)
+  }
+
+  <span class="hljs-comment">// &#x4EE3;&#x7406;&#x4E00;&#x4E0B;&#xFF0C;this.$data.xxx -&gt; this.xxx</span>
+  proxy(data) {
+    <span class="hljs-built_in">Object</span>.keys(data).forEach(key =&gt; {
+      <span class="hljs-comment">// this</span>
+      <span class="hljs-built_in">Object</span>.defineProperty(<span class="hljs-keyword">this</span>, key, {
+        enumerable: <span class="hljs-literal">true</span>,
+        configurable: <span class="hljs-literal">true</span>,
+        get() {
+          <span class="hljs-keyword">return</span> data[key]
+        },
+        set(newValue) {
+          <span class="hljs-comment">// NaN !== NaN</span>
+          <span class="hljs-keyword">if</span> (data[key] === newValue || __isNaN(data[key], newValue)) <span class="hljs-keyword">return</span>
+          data[key] = newValue
+        }
+      })
+    })
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__isNaN</span>(<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>.isNaN(a) &amp;&amp; <span class="hljs-built_in">Number</span>.isNaN(b)
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dep</span> </span>{
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">this</span>.deps = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>()
+  }
+  add(dep) {
+    <span class="hljs-keyword">if</span> (dep &amp;&amp; dep.update) <span class="hljs-keyword">this</span>.deps.add(dep)
+  }
+  notify() {
+    <span class="hljs-keyword">this</span>.deps.forEach(dep =&gt; dep.update())
+  } 
+}
+
+<span class="hljs-comment">// html -&gt; &lt;h1&gt;{{ count }}&lt;/h1&gt; -&gt; compiler &#x53D1;&#x73B0;&#x6709; {{ count }}</span>
+<span class="hljs-comment">// -&gt; new Watcher(vm, &apos;count&apos;, () =&gt; renderToView(count)) -&gt; count getter &#x88AB;&#x89E6;&#x53D1;</span>
+<span class="hljs-comment">// -&gt; dep.add(watcher&#x5B9E;&#x4F8B;) -&gt; this.count++ -&gt; count setter -&gt; dep.notify</span>
+<span class="hljs-comment">// -&gt; () =&gt; renderToView(count) -&gt; &#x9875;&#x9762;&#x5C31;&#x53D8;&#x4E86;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Watcher</span> </span>{
+  <span class="hljs-comment">// vm - Vue &#x5B9E;&#x4F8B;</span>
+  <span class="hljs-keyword">constructor</span>(vm, key, cb) {
+    <span class="hljs-keyword">this</span>.vm = vm
+    <span class="hljs-keyword">this</span>.key = key
+    <span class="hljs-keyword">this</span>.cb = cb <span class="hljs-comment">// &#x5728;&#x6211;&#x4EEC;&#x4ECA;&#x5929;&#x7684;&#x5217;&#x5B50;&#x91CC;&#x9762;&#xFF0C;&#x5C31;&#x662F;&#x7ED8;&#x5236;&#x6570;&#x636E;&#x5230;&#x9875;&#x9762;</span>
+
+    <span class="hljs-comment">// window.watcher = this</span>
+    Dep.target = <span class="hljs-keyword">this</span>
+    <span class="hljs-keyword">this</span>.__old = vm[key] <span class="hljs-comment">// &#x5B58;&#x4E0B;&#x4E86;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x89E6;&#x53D1; getter</span>
+    Dep.target = <span class="hljs-literal">null</span>
+  }
+  update() {
+    <span class="hljs-keyword">let</span> newValue = <span class="hljs-keyword">this</span>.vm[<span class="hljs-keyword">this</span>.key]
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.__old === newValue || __isNaN(newValue, <span class="hljs-keyword">this</span>.__old)) <span class="hljs-keyword">return</span>
+    <span class="hljs-keyword">this</span>.cb(newValue)
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Observer</span> </span>{
+  <span class="hljs-keyword">constructor</span>(data) {
+    <span class="hljs-keyword">this</span>.walk(data)
+  }
+  walk(data) {
+    <span class="hljs-keyword">if</span> (!data || <span class="hljs-keyword">typeof</span> data !== <span class="hljs-string">&apos;object&apos;</span>) <span class="hljs-keyword">return</span>
+    <span class="hljs-built_in">Object</span>.keys(data).forEach(key =&gt; <span class="hljs-keyword">this</span>.defineReactive(data, key, data[key]))
+  }
+  defineReactive(obj, key, value) {
+    <span class="hljs-keyword">let</span> that = <span class="hljs-keyword">this</span>
+    <span class="hljs-keyword">this</span>.walk(value)
+    <span class="hljs-keyword">let</span> dep = <span class="hljs-keyword">new</span> Dep()
+    <span class="hljs-built_in">Object</span>.defineProperty(obj, key, {
+      configurable: <span class="hljs-literal">true</span>,
+      enumerable: <span class="hljs-literal">true</span>,
+      get() {
+        <span class="hljs-comment">// Watcher &#x5B9E;&#x4F8B;</span>
+        Dep.target &amp;&amp; dep.add(Dep.target)
+        <span class="hljs-keyword">return</span> value
+      },
+      set(newValue) {
+        <span class="hljs-keyword">if</span> (value === newValue || __isNaN(value, newValue)) <span class="hljs-keyword">return</span>
+        value = newValue
+        that.walk(newValue)
+        dep.notify()
+      }
+    })
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Compiler</span> </span>{
+  <span class="hljs-keyword">constructor</span>(vm) {
+    <span class="hljs-keyword">this</span>.el = vm.$el
+    <span class="hljs-keyword">this</span>.vm = vm
+    <span class="hljs-keyword">this</span>.methods = vm.$methods
+
+    <span class="hljs-keyword">this</span>.compile(vm.$el)
+  }
+  compile(el) {
+    <span class="hljs-keyword">let</span> childNodes = el.childNodes
+    <span class="hljs-comment">// &#x7C7B;&#x6570;&#x7EC4;</span>
+    <span class="hljs-built_in">Array</span>.from(childNodes).forEach(node =&gt; {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isTextNode(node)) {
+        <span class="hljs-keyword">this</span>.compileText(node)
+      }
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isElementNode(node)) {
+        <span class="hljs-keyword">this</span>.compileElement(node)
+      }
+
+      <span class="hljs-keyword">if</span> (node.childNodes &amp;&amp; node.childNodes.length) <span class="hljs-keyword">this</span>.compile(node)
+      <span class="hljs-comment">// ...</span>
+    })
+  }
+  <span class="hljs-comment">// &lt;input v-model=&quot;msg&quot;/&gt;</span>
+  compileElement(node) {
+    <span class="hljs-keyword">if</span> (node.attributes.length) {
+      <span class="hljs-built_in">Array</span>.from(node.attributes).forEach(attr =&gt; {
+        <span class="hljs-keyword">let</span> attrName = attr.name
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isDirective(attrName)) {
+          <span class="hljs-comment">// v-on:click  v-model</span>
+          attrName = attrName.indexOf(<span class="hljs-string">&apos;:&apos;</span>) &gt; <span class="hljs-number">-1</span> ? attrName.substr(<span class="hljs-number">5</span>) : attrName.substr(<span class="hljs-number">2</span>)
+          <span class="hljs-keyword">let</span> key = attr.value
+          <span class="hljs-keyword">this</span>.update(node, key, attrName, <span class="hljs-keyword">this</span>.vm[key])
+        }
+        <span class="hljs-comment">// ...</span>
+      })
+    }
+  }
+  update(node, key, attrName, value) {
+    <span class="hljs-keyword">if</span> (attrName === <span class="hljs-string">&apos;text&apos;</span>) {
+      node.textContent = value
+      <span class="hljs-keyword">new</span> Watcher(<span class="hljs-keyword">this</span>.vm, key, val =&gt; node.textContent = val)
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (attrName === <span class="hljs-string">&apos;model&apos;</span>) {
+      node.value = value
+      <span class="hljs-keyword">new</span> Watcher(<span class="hljs-keyword">this</span>.vm, key, val =&gt; node.value = val)
+      node.addEventListener(<span class="hljs-string">&apos;input&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">this</span>.vm[key] = node.value
+      })
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (attrName === <span class="hljs-string">&apos;click&apos;</span>) {
+      node.addEventListener(attrName, <span class="hljs-keyword">this</span>.methods[key].bind(<span class="hljs-keyword">this</span>.vm))
+    }
+    <span class="hljs-comment">// ....</span>
+  }
+  <span class="hljs-comment">// &apos;this is {{ count }}&apos;</span>
+  compileText(node) {
+    <span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\{\{(.+?)\}\}/</span>
+    <span class="hljs-keyword">let</span> value = node.textContent
+    <span class="hljs-keyword">if</span> (reg.test(value)) {
+      <span class="hljs-keyword">let</span> key = <span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">1.</span>trim()
+      node.textContent = value.replace(reg, <span class="hljs-keyword">this</span>.vm[key])
+
+      <span class="hljs-keyword">new</span> Watcher(<span class="hljs-keyword">this</span>.vm, key, val =&gt; {
+        node.textContent = val
+      })
+    }
+  }
+  isDirective(str) {
+    <span class="hljs-keyword">return</span> str.startsWith(<span class="hljs-string">&apos;v-&apos;</span>)
+  }
+  isElementNode(node) {
+    <span class="hljs-keyword">return</span> node.nodeType === <span class="hljs-number">1</span>
+  }
+  isTextNode(node) {
+    <span class="hljs-keyword">return</span> node.nodeType === <span class="hljs-number">3</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&apos;module&apos;</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">import</span> { Vue } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./index.js&apos;</span>
+    <span class="hljs-keyword">let</span> vm = <span class="hljs-keyword">new</span> Vue({
+      el: <span class="hljs-string">&apos;#app&apos;</span>,
+      data: {
+        msg: <span class="hljs-string">&apos;Hello Vue2.x&apos;</span>,
+        count: <span class="hljs-number">666</span>
+      },
+      methods: {
+        increase() {
+          <span class="hljs-keyword">this</span>.count++
+        }
+      }
+    })
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>{{ msg }}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>{{ count }}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>v-text<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">&quot;msg&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>v-model<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;msg&quot;</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;count&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;increase&quot;</span>&gt;</span>&#x6309;&#x94AE;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="objectdefinepropertyobj-key-handler"><a name="objectdefinepropertyobj-key-handler" class="anchor-navigation-ex-anchor" href="#objectdefinepropertyobj-key-handler"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Object.defineProperty(obj, key, handler)</h3>
+<ul>
+<li><p>&#x5BF9;&#x8C61;&#x904D;&#x5386;&#x65B9;&#x6CD5;&#xFF1A;Reflect.ownKeys(obj) / Object.keys()</p>
+</li>
+<li><p>&#x9012;&#x5F52;&#x6A21;&#x677F;&#xFF1A;&#x9996;&#x5148;&#x662F;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;</p>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> render = (key, val) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`SET key=<span class="hljs-subst">${key}</span> val=<span class="hljs-subst">${val}</span>`</span>)
+}
+
+<span class="hljs-keyword">const</span> reactive = (obj) =&gt; {
+  <span class="hljs-comment">// &#x9012;&#x5F52;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.prototype.toString.call(obj) !== <span class="hljs-string">&apos;[object Object]&apos;</span>) {
+    <span class="hljs-keyword">return</span>
+  }
+  <span class="hljs-built_in">Reflect</span>.ownKeys(obj).forEach(key =&gt; {
+    <span class="hljs-keyword">let</span> val = obj[key]
+    <span class="hljs-comment">// &#x4E0B;&#x63A2;&#x5230;&#x4E0B;&#x4E00;&#x5C42;</span>
+    reactive(val)
+    <span class="hljs-comment">// &#x5F53;&#x524D;&#x5C42;&#x903B;&#x8F91;&#x5904;&#x7406;</span>
+    <span class="hljs-built_in">Object</span>.defineProperty(obj, key, {
+      get() {
+        <span class="hljs-keyword">return</span> val
+      },
+      set(newVal) {
+        <span class="hljs-keyword">if</span> (val !== newVal) {
+          val = newVal
+          render(key, val)
+        }
+      }
+    })
+  })
+}
+
+
+<span class="hljs-keyword">const</span> data = {
+  a: <span class="hljs-number">1</span>,
+  b: <span class="hljs-number">2</span>,
+  c: {
+    c1: {
+      d: <span class="hljs-number">99</span>
+    },
+    c2: <span class="hljs-number">3</span>
+  }
+}
+
+reactive(data1)
+
+data.a = <span class="hljs-number">5</span>
+data.c.c2 = <span class="hljs-number">6</span>
+data.c.c1.d = <span class="hljs-number">7</span>
+</code></pre>
+<h3 id="&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;"><a name="&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;</h3>
+<ul>
+<li><p>&#x6539;&#x5199;&#x6570;&#x7EC4;&#x539F;&#x578B;&#x65B9;&#x6CD5;&#xFF1A;arr.<strong>proto</strong> === Array.prototype</p>
+</li>
+<li><p>&#x6570;&#x7EC4;&#x539F;&#x578B;&#x65B9;&#x6CD5;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;</p>
+</li>
+<li><p>&#x6570;&#x7EC4;&#x7684;&#x5224;&#x65AD;&#x65B9;&#x6CD5;&#xFF1A;Object.prototype.toString.call(arr) === &apos;[object Array]&apos;</p>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> render = (method, ...val) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`method:<span class="hljs-subst">${method}</span>-val:<span class="hljs-subst">${val}</span>`</span>)
+}
+
+<span class="hljs-keyword">const</span> reactive = (arr) =&gt; {
+  <span class="hljs-comment">// &#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#x539F;&#x578B;&#x65B9;&#x6CD5;</span>
+  <span class="hljs-keyword">const</span> arrPrototype = <span class="hljs-built_in">Array</span>.prototype
+
+  <span class="hljs-comment">// &#x521B;&#x5EFA;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x539F;&#x578B;&#x65B9;&#x6CD5;</span>
+  <span class="hljs-keyword">const</span> newArrPrototype = <span class="hljs-built_in">Object</span>.create(arrPrototype)
+
+  <span class="hljs-keyword">const</span> methods = [<span class="hljs-string">&apos;push&apos;</span>, <span class="hljs-string">&apos;pop&apos;</span>, <span class="hljs-string">&apos;unshift&apos;</span>, <span class="hljs-string">&apos;shift&apos;</span>, <span class="hljs-string">&apos;splice&apos;</span>, <span class="hljs-string">&apos;sort&apos;</span>, <span class="hljs-string">&apos;reverse&apos;</span>]
+
+  <span class="hljs-comment">// &#x6539;&#x5199;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x539F;&#x578B;&#x65B9;&#x6CD5;</span>
+  methods.forEach(method =&gt; {
+    newArrPrototype[method] = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      arrPrototype[method].call(<span class="hljs-keyword">this</span>, ...arguments)
+      render(method, ...arguments)
+    }
+  })
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.prototype.toString.call(arr) !== <span class="hljs-string">&apos;[object Array]&apos;</span>) <span class="hljs-keyword">return</span>
+  <span class="hljs-comment">// &#x7528;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x539F;&#x578B;&#x65B9;&#x6CD5;&#x66FF;&#x6362;&#x5B9E;&#x4F8B;&#x65E7;&#x7684;&#x539F;&#x578B;&#x65B9;&#x6CD5; arr.__proto__ === Array.prototype</span>
+  arr.__proto__ = newArrPrototype
+}
+
+data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+reactive(data)
+
+data.push(<span class="hljs-number">5</span>)
+data.splice(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>)
+data.reverse()
+data.sort((a, b) =&gt; a - b)
+</code></pre>
+<h2 id="vue30"><a name="vue30" class="anchor-navigation-ex-anchor" href="#vue30"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. vue3.0</h2>
+<blockquote>
+<p>proxy + composition-api</p>
+<p>vue3.0 &#x7684;&#x6570;&#x636E;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#xFF0C;&#x4ECE; reactive &#x8BF4;&#x8D77;&#xFF0C;&#x89E6;&#x53D1; get &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BA2;&#x9605;&#x4F9D;&#x8D56;&#xFF0C;&#x89E6;&#x53D1; set &#x548C; delete &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53D1;&#x5E03;&#x4F9D;&#x8D56;&#xFF0C;&#x4F9D;&#x8D56;&#x7684;&#x6536;&#x96C6;&#x672C;&#x8D28;&#x8FD8;&#x662F;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> reactive = (data) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>(data, {
+    get(target, key, receiver) {
+      <span class="hljs-keyword">const</span> ret = <span class="hljs-built_in">Reflect</span>.get(target, key, receiver)
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;get&apos;</span>, key)
+      <span class="hljs-comment">// &#x6B64;&#x5904;&#x8BA2;&#x9605;&#x4F9D;&#x8D56;&#xFF0C;&#x8C03;&#x7528; track(target, key)</span>
+      <span class="hljs-keyword">return</span> ret
+    },
+    set(target, key, val, receiver) {
+      <span class="hljs-built_in">Reflect</span>.set(target, key, val, receiver)
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;set&apos;</span>, key, val)
+      <span class="hljs-comment">// &#x6B64;&#x5904;&#x53D1;&#x5E03;&#x4F9D;&#x8D56;&#xFF0C;&#x8C03;&#x7528; trigger(target, key)</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    },
+    deleteProperty(target, key, receiver) {
+      <span class="hljs-keyword">const</span> ret = <span class="hljs-built_in">Reflect</span>.deleteProperty(target, key, receiver)
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;delete&apos;</span>, key)
+      <span class="hljs-comment">// &#x6B64;&#x5904;&#x4E5F;&#x662F;&#x53D1;&#x5E03;&#x4F9D;&#x8D56;&#xFF0C;&#x8C03;&#x7528; trigger(target, key)&#xFF0C;&#x76F8;&#x5F53;&#x4E8E; dep.notify()</span>
+      <span class="hljs-keyword">return</span> ret 
+    }
+  })
+}
+</code></pre>
+<h2 id="new-proxyobj-handler"><a name="new-proxyobj-handler" class="anchor-navigation-ex-anchor" href="#new-proxyobj-handler"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. new Proxy(obj, handler)</h2>
+<ul>
+<li><p>handler &#x4E2A;&#x65B9;&#x6CD5;&#x5BF9;&#x5E94;&#x7684;&#x53C2;&#x6570;&#xFF1A;target&#x3001;key&#x3001;value&#x3001;receiver</p>
+</li>
+<li><p>Reflect.get(target, key, receiver)</p>
+</li>
+<li><p>Reflect.set(target, key, val, receiver)</p>
+</li>
+<li><p>Reflect.deleteProperty(target, key)</p>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> observableStore = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>()
+
+<span class="hljs-keyword">const</span> makeObservable = (target) =&gt; {
+  <span class="hljs-keyword">let</span> handleName = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;handle&apos;</span>)
+  observableStore.set(handleName, [])
+  target.observe = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">handler</span>) </span>{
+    observableStore.get(handleName).push(handler)
+  }
+
+  <span class="hljs-keyword">const</span> proxyHandler = {
+    get(target, key, receiver) {
+      observableStore.get(handleName).forEach(handler =&gt; handler(<span class="hljs-string">&apos;GET&apos;</span>, key, target[key]))
+      <span class="hljs-comment">// &#x61D2;&#x76D1;&#x542C;&#xFF0C;&#x53BB;&#x83B7;&#x53D6;&#x7684;&#x65F6;&#x5019;&#x624D;&#x76D1;&#x542C;&#x5BF9;&#x8C61;&#x91CC;&#x9762;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x9012;&#x5F52;&#x5FAA;&#x73AF;&#x76D1;&#x542C;</span>
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> target[key] === <span class="hljs-string">&apos;object&apos;</span> &amp;&amp; target[key] !== <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>(target[key], proxyHandler)
+      }
+
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Reflect</span>.get(target, key, receiver)
+    },
+    set(target, key, val, receiver) {
+      observableStore.get(handleName).forEach(handler =&gt; handler(<span class="hljs-string">&apos;SET&apos;</span>, key, val))
+      <span class="hljs-built_in">Reflect</span>.set(target, key, val, receiver)
+    },
+    deleteProperty(target, key) {
+      observableStore.get(handleName).forEach(handler =&gt; handler(<span class="hljs-string">&apos;DELETE&apos;</span>, key, target[key]))
+      <span class="hljs-built_in">Reflect</span>.deleteProperty(target, key)
+    }
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>(target, proxyHandler)
+}
+
+<span class="hljs-keyword">let</span> user = {
+  a: {
+    b: <span class="hljs-number">1</span>
+  }
+}
+
+user = makeObservable(user)
+
+user.observe((action, key, value) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${action}</span> key=<span class="hljs-subst">${key}</span> value=<span class="hljs-subst">${value}</span>`</span>)
+})
+
+user.name = <span class="hljs-string">&apos;Tommy&apos;</span>
+<span class="hljs-built_in">console</span>.log(user.name)
+<span class="hljs-keyword">delete</span> user.name
+<span class="hljs-built_in">console</span>.log(user.a.b)
+<span class="hljs-built_in">console</span>.log(user.a)
+user.a.b = <span class="hljs-number">2</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; tomgou 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-09-15 15:04:17
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../diff/" class="navigation navigation-prev " aria-label="Previous page: diff">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../eventEmitter/" class="navigation navigation-next " aria-label="Next page: eventBus">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"reactive","level":"1.6.6","depth":2,"next":{"title":"eventBus","level":"1.6.7","depth":2,"path":"pages/vue/eventEmitter/index.md","ref":"pages/vue/eventEmitter/index.md","articles":[]},"previous":{"title":"diff","level":"1.6.5","depth":2,"path":"pages/vue/diff/index.md","ref":"pages/vue/diff/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-pro","github","hide-element","chapter-fold","splitter","-lunr","-search","search-pro","copy-code-button","back-to-top-button","tbfed-pagefooter","popup","mermaid-gb3","anchor-navigation-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy tomgou 2022","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://tomgou.github.io/algorithm-study/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"back-to-top-button":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"tomgou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"工作总结","language":"zh-hans","gitbook":"*","description":"日常工作记录"},"file":{"path":"pages/vue/reactive/index.md","mtime":"2022-09-15T07:04:17.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-24T07:59:09.030Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

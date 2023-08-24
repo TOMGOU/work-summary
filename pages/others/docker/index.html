@@ -1,0 +1,2361 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>docker · 工作总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="tomgou">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../git/" />
+    
+    
+    <link rel="prev" href="../whistle/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    工作总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../gitbook/">
+            
+                <a href="../../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../gitbook/mermaid/">
+            
+                <a href="../../gitbook/mermaid/">
+            
+                    
+                    Mermaid-gb3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../gitbook/markdown/">
+            
+                <a href="../../gitbook/markdown/">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../experience/">
+            
+                <a href="../../experience/">
+            
+                    
+                    KeyPoints
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../experience/webView/">
+            
+                <a href="../../experience/webView/">
+            
+                    
+                    Web-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../experience/pageMeta/">
+            
+                <a href="../../experience/pageMeta/">
+            
+                    
+                    Page-Meta
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../experience/PDFPreview/">
+            
+                <a href="../../experience/PDFPreview/">
+            
+                    
+                    PDF-Preview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../experience/subscribeMessage/">
+            
+                <a href="../../experience/subscribeMessage/">
+            
+                    
+                    模板消息订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../experience/channelLive/">
+            
+                <a href="../../experience/channelLive/">
+            
+                    
+                    跳转视频号和直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../experience/internationalization/">
+            
+                <a href="../../experience/internationalization/">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../experience/biEcharts/">
+            
+                <a href="../../experience/biEcharts/">
+            
+                    
+                    BI-Echarts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../experience/lowCode/">
+            
+                <a href="../../experience/lowCode/">
+            
+                    
+                    低代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../experience/taroWepy/">
+            
+                <a href="../../experience/taroWepy/">
+            
+                    
+                    wepy->taro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../experience/miniprogramCi/">
+            
+                <a href="../../experience/miniprogramCi/">
+            
+                    
+                    miniprogram-ci
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../experience/fullScreen/">
+            
+                <a href="../../experience/fullScreen/">
+            
+                    
+                    full-screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../experience/silentLogin/">
+            
+                <a href="../../experience/silentLogin/">
+            
+                    
+                    静默登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../experience/timeDiff/">
+            
+                <a href="../../experience/timeDiff/">
+            
+                    
+                    时间差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../../experience/issue/">
+            
+                <a href="../../experience/issue/">
+            
+                    
+                    issue模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../../experience/webp/">
+            
+                <a href="../../experience/webp/">
+            
+                    
+                    webp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../../experience/markdown/">
+            
+                <a href="../../experience/markdown/">
+            
+                    
+                    markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../../experience/memoryAnalysis/">
+            
+                <a href="../../experience/memoryAnalysis/">
+            
+                    
+                    memoryAnalysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../css/">
+            
+                <a href="../../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../css/UE/">
+            
+                <a href="../../css/UE/">
+            
+                    
+                    提升用户体验细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../css/flex/">
+            
+                <a href="../../css/flex/">
+            
+                    
+                    flex最后一行左对齐问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../css/fixed/">
+            
+                <a href="../../css/fixed/">
+            
+                    
+                    神奇的固定定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../css/layout/">
+            
+                <a href="../../css/layout/">
+            
+                    
+                    布局与居中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../css/pollution/">
+            
+                <a href="../../css/pollution/">
+            
+                    
+                    样式污染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../css/img/">
+            
+                <a href="../../css/img/">
+            
+                    
+                    图片尺寸
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../css/ipxFit/">
+            
+                <a href="../../css/ipxFit/">
+            
+                    
+                    ipx适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../css/radio/">
+            
+                <a href="../../css/radio/">
+            
+                    
+                    radio样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../css/BFC/">
+            
+                <a href="../../css/BFC/">
+            
+                    
+                    BFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../../css/REM/">
+            
+                <a href="../../css/REM/">
+            
+                    
+                    REM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../js/">
+            
+                <a href="../../js/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../js/performance/">
+            
+                <a href="../../js/performance/">
+            
+                    
+                    性能优化细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../js/promise/">
+            
+                <a href="../../js/promise/">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../js/proto/">
+            
+                <a href="../../js/proto/">
+            
+                    
+                    原型及原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../js/module/">
+            
+                <a href="../../js/module/">
+            
+                    
+                    模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../js/ES6/">
+            
+                <a href="../../js/ES6/">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../js/RegExp/">
+            
+                <a href="../../js/RegExp/">
+            
+                    
+                    正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../js/callApplyBind/">
+            
+                <a href="../../js/callApplyBind/">
+            
+                    
+                    call/apply/bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../js/babel/">
+            
+                <a href="../../js/babel/">
+            
+                    
+                    babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../js/typescript/">
+            
+                <a href="../../js/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../js/debounceThrottle/">
+            
+                <a href="../../js/debounceThrottle/">
+            
+                    
+                    Debounce & Throttle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../js/bitOperation/">
+            
+                <a href="../../js/bitOperation/">
+            
+                    
+                    Bit Operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../js/ajax/">
+            
+                <a href="../../js/ajax/">
+            
+                    
+                    Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../../js/designPattern/">
+            
+                <a href="../../js/designPattern/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../../js/eslint/">
+            
+                <a href="../../js/eslint/">
+            
+                    
+                    ESlint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../../js/test/">
+            
+                <a href="../../js/test/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../vue/">
+            
+                <a href="../../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../vue/vueCli/">
+            
+                <a href="../../vue/vueCli/">
+            
+                    
+                    vue-cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../vue/vueRouter/">
+            
+                <a href="../../vue/vueRouter/">
+            
+                    
+                    vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../vue/vuex/">
+            
+                <a href="../../vue/vuex/">
+            
+                    
+                    vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../vue/ssr/">
+            
+                <a href="../../vue/ssr/">
+            
+                    
+                    ssr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../vue/diff/">
+            
+                <a href="../../vue/diff/">
+            
+                    
+                    diff
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../vue/reactive/">
+            
+                <a href="../../vue/reactive/">
+            
+                    
+                    reactive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../vue/eventEmitter/">
+            
+                <a href="../../vue/eventEmitter/">
+            
+                    
+                    eventBus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../vue/nextTick/">
+            
+                <a href="../../vue/nextTick/">
+            
+                    
+                    nextTick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../vue/decoration/">
+            
+                <a href="../../vue/decoration/">
+            
+                    
+                    decoration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../vue/vue3/">
+            
+                <a href="../../vue/vue3/">
+            
+                    
+                    vue3新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../../vue/dom/">
+            
+                <a href="../../vue/dom/">
+            
+                    
+                    虚拟dom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../../vue/communication/">
+            
+                <a href="../../vue/communication/">
+            
+                    
+                    组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../react/">
+            
+                <a href="../../react/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../react/umiProComponents/">
+            
+                <a href="../../react/umiProComponents/">
+            
+                    
+                    umi + proComponents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../react/context/">
+            
+                <a href="../../react/context/">
+            
+                    
+                    context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../react/reactRouter/">
+            
+                <a href="../../react/reactRouter/">
+            
+                    
+                    react-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../react/reactRedux/">
+            
+                <a href="../../react/reactRedux/">
+            
+                    
+                    react-redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../react/hooks/">
+            
+                <a href="../../react/hooks/">
+            
+                    
+                    hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../react/portal/">
+            
+                <a href="../../react/portal/">
+            
+                    
+                    portal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../react/suspense/">
+            
+                <a href="../../react/suspense/">
+            
+                    
+                    suspense
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../react/sourceCode/">
+            
+                <a href="../../react/sourceCode/">
+            
+                    
+                    source-code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../react/reactNative/">
+            
+                <a href="../../react/reactNative/">
+            
+                    
+                    react-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../threeJS/">
+            
+                <a href="../../threeJS/">
+            
+                    
+                    threeJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../threeJS/Math/">
+            
+                <a href="../../threeJS/Math/">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../threeJS/Webgl/">
+            
+                <a href="../../threeJS/Webgl/">
+            
+                    
+                    Webgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../threeJS/Shader/">
+            
+                <a href="../../threeJS/Shader/">
+            
+                    
+                    Shader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../threeJS/Draco/">
+            
+                <a href="../../threeJS/Draco/">
+            
+                    
+                    Draco
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../threeJS/glTF/">
+            
+                <a href="../../threeJS/glTF/">
+            
+                    
+                    glTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../threeJS/CSS3DRender/">
+            
+                <a href="../../threeJS/CSS3DRender/">
+            
+                    
+                    CSS3DRender
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../threeJS/Raycaster/">
+            
+                <a href="../../threeJS/Raycaster/">
+            
+                    
+                    Raycaster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../../threeJS/MaterialReset/">
+            
+                <a href="../../threeJS/MaterialReset/">
+            
+                    
+                    MaterialReset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../../threeJS/Animation/">
+            
+                <a href="../../threeJS/Animation/">
+            
+                    
+                    Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../../threeJS/GuiControls/">
+            
+                <a href="../../threeJS/GuiControls/">
+            
+                    
+                    GuiControls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../../threeJS/Panorama/">
+            
+                <a href="../../threeJS/Panorama/">
+            
+                    
+                    Panorama
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../../threeJS/KeyboardControl/">
+            
+                <a href="../../threeJS/KeyboardControl/">
+            
+                    
+                    KeyboardControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../../threeJS/Audio/">
+            
+                <a href="../../threeJS/Audio/">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../../threeJS/Encoding/">
+            
+                <a href="../../threeJS/Encoding/">
+            
+                    
+                    sRGBEncoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../node/nvm/">
+            
+                <a href="../../node/nvm/">
+            
+                    
+                    nvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../node/fs/">
+            
+                <a href="../../node/fs/">
+            
+                    
+                    fs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../node/path/">
+            
+                <a href="../../node/path/">
+            
+                    
+                    path
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../node/http/">
+            
+                <a href="../../node/http/">
+            
+                    
+                    http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../node/https/">
+            
+                <a href="../../node/https/">
+            
+                    
+                    https
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../node/events/">
+            
+                <a href="../../node/events/">
+            
+                    
+                    events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../../node/childProcess/">
+            
+                <a href="../../node/childProcess/">
+            
+                    
+                    child_process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../node/stream/">
+            
+                <a href="../../node/stream/">
+            
+                    
+                    stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../node/buffer/">
+            
+                <a href="../../node/buffer/">
+            
+                    
+                    buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../../node/dependency/">
+            
+                <a href="../../node/dependency/">
+            
+                    
+                    依赖管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../webpack/">
+            
+                <a href="../../webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../webpack/basic/">
+            
+                <a href="../../webpack/basic/">
+            
+                    
+                    基础配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../webpack/optimize/">
+            
+                <a href="../../webpack/optimize/">
+            
+                    
+                    optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../webpack/plugin/">
+            
+                <a href="../../webpack/plugin/">
+            
+                    
+                    webpack-plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../webpack/loader/">
+            
+                <a href="../../webpack/loader/">
+            
+                    
+                    webpack-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../webpack/hmr/">
+            
+                <a href="../../webpack/hmr/">
+            
+                    
+                    hotModuleReplace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../webpack/webpack5/">
+            
+                <a href="../../webpack/webpack5/">
+            
+                    
+                    webpack5新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../webpack/vite/">
+            
+                <a href="../../webpack/vite/">
+            
+                    
+                    vite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../webpack/ndb/">
+            
+                <a href="../../webpack/ndb/">
+            
+                    
+                    ndb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../../webpack/websocket/">
+            
+                <a href="../../webpack/websocket/">
+            
+                    
+                    websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../../webpack/rollup/">
+            
+                <a href="../../webpack/rollup/">
+            
+                    
+                    rollup与soucemap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../../webpack/gulp/">
+            
+                <a href="../../webpack/gulp/">
+            
+                    
+                    gulp与yargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../codeReview/">
+            
+                <a href="../../codeReview/">
+            
+                    
+                    Code Review
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../codeReview/cyclomaticComplexity/">
+            
+                <a href="../../codeReview/cyclomaticComplexity/">
+            
+                    
+                    Cyclomatic Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../projects/">
+            
+                <a href="../../projects/">
+            
+                    
+                    Projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../interview/">
+            
+                <a href="../../interview/">
+            
+                    
+                    Interview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../interview/eventLoop/">
+            
+                <a href="../../interview/eventLoop/">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../interview/deepClone/">
+            
+                <a href="../../interview/deepClone/">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../interview/CDN/">
+            
+                <a href="../../interview/CDN/">
+            
+                    
+                    CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../interview/safety/">
+            
+                <a href="../../interview/safety/">
+            
+                    
+                    网络安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../interview/http/">
+            
+                <a href="../../interview/http/">
+            
+                    
+                    http问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../interview/mqtt/">
+            
+                <a href="../../interview/mqtt/">
+            
+                    
+                    mqtt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../../interview/Internet/">
+            
+                <a href="../../interview/Internet/">
+            
+                    
+                    url输入到展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../../interview/typescript/">
+            
+                <a href="../../interview/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../../interview/BFC/">
+            
+                <a href="../../interview/BFC/">
+            
+                    
+                    BFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" data-path="../../interview/import/">
+            
+                <a href="../../interview/import/">
+            
+                    
+                    按需引入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.11" data-path="../../interview/projects/">
+            
+                <a href="../../interview/projects/">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Others
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../gitlab/">
+            
+                <a href="../gitlab/">
+            
+                    
+                    GitLab CI/CD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    云服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../mysql/">
+            
+                <a href="../mysql/">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../cloud/">
+            
+                <a href="../cloud/">
+            
+                    
+                    微信小程序云开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../lerna/">
+            
+                <a href="../lerna/">
+            
+                    
+                    lerna
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../charles/">
+            
+                <a href="../charles/">
+            
+                    
+                    charles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../whistle/">
+            
+                <a href="../whistle/">
+            
+                    
+                    whistle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="../slidev/">
+            
+                <a href="../slidev/">
+            
+                    
+                    sli.dev
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="../iTerm/">
+            
+                <a href="../iTerm/">
+            
+                    
+                    iTerm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.12" data-path="../chrome/">
+            
+                <a href="../chrome/">
+            
+                    
+                    chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.13" data-path="../husky/">
+            
+                <a href="../husky/">
+            
+                    
+                    husky
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.14" data-path="../typora/">
+            
+                <a href="../typora/">
+            
+                    
+                    typora 破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >docker</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#docker"><b>1. </b>docker</a></li><ul><li><span class="title-icon "></span><a href="#docker&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b>1.1. </b>docker&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#dockerfile"><b>1.1.1. </b>Dockerfile</a></li></ul><li><span class="title-icon "></span><a href="#docker-compose&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b>1.2. </b>docker-compose&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#docker-composeyml"><b>1.2.1. </b>docker-compose.yml</a></li></ul></ul><li><span class="title-icon "></span><a href="#docker-&#x5B9E;&#x6218;"><b>2. </b>docker &#x5B9E;&#x6218;</a></li><ul><li><span class="title-icon "></span><a href="#1&#x521B;&#x5EFA;-dockerfile-&#x6587;&#x4EF6;"><b>2.1. </b>1.&#x521B;&#x5EFA; Dockerfile &#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#2nginx-&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><b>2.2. </b>2.nginx &#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#3&#x6784;&#x5EFA;&#x955C;&#x50CF;"><b>2.3. </b>3.&#x6784;&#x5EFA;&#x955C;&#x50CF;</a></li><li><span class="title-icon "></span><a href="#4&#x542F;&#x52A8;&#x955C;&#x50CF;&#x5BB9;&#x5668;"><b>2.4. </b>4.&#x542F;&#x52A8;&#x955C;&#x50CF;&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#5&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;"><b>2.5. </b>5.&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;</a></li><li><span class="title-icon "></span><a href="#6&#x7F16;&#x5199;-docker-composeyml"><b>2.6. </b>6.&#x7F16;&#x5199; docker-compose.yml</a></li><li><span class="title-icon "></span><a href="#7docker-compose-&#x542F;&#x52A8;&#x5BB9;&#x5668;"><b>2.7. </b>7.docker-compose &#x542F;&#x52A8;&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#8&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;"><b>2.8. </b>8.&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;</a></li></ul></ul></div><a href="#docker" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="docker"><a name="docker" class="anchor-navigation-ex-anchor" href="#docker"><i class="fa fa-link" aria-hidden="true"></i></a>1. docker</h1>
+<h2 id="docker&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="docker&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#docker&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. docker&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<pre><code>docker pull
+docker push
+docker images
+docker run -d -p 8080:80 nginx
+docker exec -it 92 bash
+docker ps
+docker rm -f 92
+docker commit 92 tomgou
+docker tag image username/repository:tag
+docker push username/repository:tag
+docker run -d -p 8080:80 username/repository:tag
+docker build -t tomgou .
+echo hello &gt; index.html
+cat index.html
+
+vim dockerfile
+// vim&#x7F16;&#x8F91;dockerfile
+
+mkdir page
+// &#x521B;&#x5EFA;page&#x6587;&#x4EF6;&#x5939;
+
+touch index.js
+// &#x521B;&#x5EFA;index.js&#x6587;&#x4EF6;
+
+rm index.js
+&#x5220;&#x9664;index.js&#x6587;&#x4EF6;
+
+rm -r page
+// &#x5220;&#x9664;page&#x6587;&#x4EF6;&#x5939;
+
+mv ~/Downloads/geckodriver  /usr/local/bin/
+// &#x5C06;geckodriver&#x6587;&#x4EF6;&#x4ECE;~/Downloads/&#x79FB;&#x5230;/usr/local/bin/
+
+pbcopy &lt; ~/Downloads/geckodriver
+// &#x590D;&#x5236;geckodriver&#x6587;&#x4EF6;
+
+pbpaste &gt; /usr/local/bin/
+// &#x7C98;&#x8D34;&#x5230;/usr/local/bin/
+
+chmod u+x,g+x,o+x geckodriver
+// u&#xFF1A;&#x6240;&#x6709;&#x8005;; g&#xFF1A;&#x6240;&#x5C5E;&#x7EC4;; o&#xFF1A;&#x5176;&#x4ED6;&#x4EBA; a&#xFF1A;&#x6240;&#x6709;&#x4EBA;; 
+// +&#xFF1A;&#x4E3A;&#x7528;&#x6237;&#x589E;&#x52A0;&#x6743;&#x9650;; -&#xFF1A;&#x4E3A;&#x7528;&#x6237;&#x51CF;&#x5C11;&#x6743;&#x9650;; =&#xFF1A;&#x4E3A;&#x7528;&#x6237;&#x8D4B;&#x4E88;&#x6743;&#x9650;;
+// r&#xFF1A;&#x8BFB;&#x6743;&#x9650;; w&#xFF1A;&#x5199;&#x6743;&#x9650;; x&#xFF1A;&#x6267;&#x884C;&#x6743;&#x9650;;
+
+ls -l geckodriver
+// &#x67E5;&#x770B;geckodriver&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;&#x4FE1;&#x606F;
+</code></pre><h3 id="dockerfile"><a name="dockerfile" class="anchor-navigation-ex-anchor" href="#dockerfile"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Dockerfile</h3>
+<pre><code>FROM: &#x57FA;&#x7840;&#x955C;&#x50CF;
+RUN&#xFF1A;&#x8BA9;&#x5B83;&#x5E72;&#x5565;&#xFF08;&#x547D;&#x4EE4;&#x52A0;&#x4E0A;RUN&#xFF09;
+WORKDIR&#xFF1A;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+EXPOSE&#xFF1A;&#x6253;&#x5F00;&#x7684;&#x7AEF;&#x53E3;
+ADD&#xFF1A;&#x52A0;&#x70B9;&#x6587;&#x4EF6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x89E3;&#x538B;
+VOLUME&#xFF1A;&#x76EE;&#x5F55;&#x6302;&#x8F7D;&#xFF0C;&#x5B58;&#x6587;&#x4EF6;&#x7684;&#x5730;&#x65B9;
+COPY&#xFF1A;
+CMD&#xFF1A;
+</code></pre><h2 id="docker-compose&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="docker-compose&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#docker-compose&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. docker-compose&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<pre><code>docker-compose --help
+docker-compose up --help
+
+docker-compose up -d
+// &#x521B;&#x5EFA;&#x5E76;&#x542F;&#x52A8;&#x5BB9;&#x5668;
+
+docker-compose -f docker-kafka.yml up -d
+// &#x6307;&#x5B9A;docker-compose&#x6587;&#x4EF6;&#x540D;
+
+docker-compose up -d db
+//&#x5355;&#x72EC;&#x542F;&#x52A8;db&#x670D;&#x52A1;
+
+docker-compose down
+// &#x505C;&#x6B62;&#x5E76;&#x79FB;&#x9664;&#x5BB9;&#x5668;&#x955C;&#x50CF;
+
+docker-compose exec db bash
+// &#x8FDB;&#x5165;db&#x5BB9;&#x5668;&#x4E2D;
+
+docker-compose restart db
+// &#x91CD;&#x542F;db&#x5BB9;&#x5668;
+
+docker-compose build db
+// &#x6784;&#x5EFA;db&#x955C;&#x50CF;
+
+docker-compose logs db
+// &#x67E5;&#x770B;db&#x7684;&#x65E5;&#x5FD7;
+
+docker-compose logs -f db
+// &#x9A8C;&#x8BC1;&#xFF08;docker-compose.yml&#xFF09;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#xFF0C;&#x5F53;&#x914D;&#x7F6E;&#x6B63;&#x786E;&#x65F6;&#xFF0C;&#x4E0D;&#x8F93;&#x51FA;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#xFF0C;&#x5F53;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x9519;&#x8BEF;&#xFF0C;&#x8F93;&#x51FA;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
+
+docker-compose pause db
+// &#x6682;&#x505C;db&#x670D;&#x52A1;
+
+docker-compose unpause db
+// &#x6062;&#x590D;db&#x670D;&#x52A1;
+
+docker-compose stop db
+// &#x505C;&#x6B62;db&#x670D;&#x52A1;
+
+docker-compose start db
+// &#x542F;&#x52A8;db&#x670D;&#x52A1;
+
+docker-compose rm db
+// &#x5220;&#x9664;db&#x5BB9;&#x5668;
+</code></pre><h3 id="docker-composeyml"><a name="docker-composeyml" class="anchor-navigation-ex-anchor" href="#docker-composeyml"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. docker-compose.yml</h3>
+<pre><code>image: &#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x955C;&#x50CF;&#x4E2D;&#x542F;&#x52A8;&#x5BB9;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x955C;&#x50CF;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;Compose &#x4F1A;&#x81EA;&#x52A8;&#x62C9;&#x53BB;&#x955C;&#x50CF;;
+
+container_name: &#x6307;&#x5B9A;&#x81EA;&#x5B9A;&#x4E49;&#x5BB9;&#x5668;&#x540D;&#x79F0;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x751F;&#x6210;&#x7684;&#x9ED8;&#x8BA4;&#x540D;&#x79F0;;
+
+ports: &#x5B9A;&#x4E49;&#x7AEF;&#x53E3;&#x6620;&#x5C04;&#xFF0C;&#x6BD4;&#x5982;80:9901&#x5C06;&#x5BB9;&#x5668;&#x4E0A;&#x7684;&#x516C;&#x5F00;&#x7AEF;&#x53E3; 80 &#x8F6C;&#x63A5;&#x5230;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5916;&#x90E8;&#x7AEF;&#x53E3; 9901;
+
+volumes: &#x6302;&#x8F7D;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;;
+
+env_file: &#x5B9A;&#x4E49;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x6587;&#x4EF6;&#xFF0C; &#x4ECE;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x4E3A;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1B;
+
+environment: &#x5B9A;&#x4E49;&#x5BB9;&#x5668;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C; &#x53EF;&#x4EE5;&#x8986;&#x76D6; env_file &#x7684;&#x503C;&#xFF1B;
+
+restart: &#x5B9A;&#x4E49;&#x5BB9;&#x5668;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x7B56;&#x7565;(restart_policy)
+
+environment: &#x5B9A;&#x4E49;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x548C;&#x914D;&#x7F6E;&#xFF1B;
+
+depends_on: &#x5B9A;&#x4E49;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;, &#x4E5F;&#x5C31;&#x662F;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x987A;&#x5E8F;&#xFF1B;
+</code></pre><h1 id="docker-&#x5B9E;&#x6218;"><a name="docker-&#x5B9E;&#x6218;" class="anchor-navigation-ex-anchor" href="#docker-&#x5B9E;&#x6218;"><i class="fa fa-link" aria-hidden="true"></i></a>2. docker &#x5B9E;&#x6218;</h1>
+<h2 id="1&#x521B;&#x5EFA;-dockerfile-&#x6587;&#x4EF6;"><a name="1&#x521B;&#x5EFA;-dockerfile-&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#1&#x521B;&#x5EFA;-dockerfile-&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. 1.&#x521B;&#x5EFA; Dockerfile &#x6587;&#x4EF6;</h2>
+<pre><code class="lang-Dockerfile"><span class="hljs-keyword">FROM</span> nginx
+
+<span class="hljs-keyword">COPY</span> <span class="bash">dist/ /usr/share/nginx/html
+</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">nginx/nginx.conf /etc/nginx/conf.d/default.conf
+</span></code></pre>
+<h2 id="2nginx-&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="2nginx-&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#2nginx-&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. 2.nginx &#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">80</span>;
+    <span class="hljs-attribute">server_name</span>  localhost;
+
+    <span class="hljs-attribute">root</span> /usr/share/nginx/html/;
+    <span class="hljs-attribute">index</span> index.html index.htm;
+    <span class="hljs-attribute">location</span> / {
+        <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.html;
+    }
+
+    <span class="hljs-attribute">location</span> = /health {
+        <span class="hljs-attribute">default_type</span>  text/plain;
+        <span class="hljs-attribute">access_log</span>  <span class="hljs-literal">off</span>;
+        <span class="hljs-attribute">error_log</span>  <span class="hljs-literal">off</span>;
+        <span class="hljs-attribute">return</span> <span class="hljs-number">200</span> <span class="hljs-string">&apos;ok\n&apos;</span>;
+    }
+
+    <span class="hljs-comment">#error_page  404              /404.html;</span>
+
+    <span class="hljs-comment"># redirect server error pages to the static page /50x.html</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attribute">error_page</span>   <span class="hljs-number">500</span> <span class="hljs-number">502</span> <span class="hljs-number">503</span> <span class="hljs-number">504</span>  /50x.html;
+    <span class="hljs-attribute">location</span> = /50x.html {
+        <span class="hljs-attribute">root</span>   /usr/share/nginx/html;
+    }
+}
+</code></pre>
+<ul>
+<li>&#x76D1;&#x542C; 80 &#x7AEF;&#x53E3;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x4E3A; localhost&#x3002;</li>
+<li>&#x5C06;&#x7F51;&#x7AD9;&#x6839;&#x76EE;&#x5F55;&#x8BBE;&#x7F6E;&#x4E3A; /usr/share/nginx/html&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x6587;&#x6863;&#x4E3A; index.html &#x6216; index.htm&#x3002;</li>
+<li>&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A; location &#x89C4;&#x5219;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x9664;&#x4E86; /health &#x4E4B;&#x5916;&#x7684;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#xFF0C;&#x8BE5;&#x89C4;&#x5219;&#x5C06;&#x5C1D;&#x8BD5;&#x5339;&#x914D;&#x8BF7;&#x6C42;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x91CD;&#x5B9A;&#x5411;&#x5230; /index.html&#x3002;</li>
+<li>&#x914D;&#x7F6E;&#x4E86;&#x53E6;&#x4E00;&#x4E2A; location &#x89C4;&#x5219;&#x7528;&#x4E8E;&#x5904;&#x7406; /health &#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; 200 OK &#x54CD;&#x5E94;&#x3002;</li>
+<li>&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x9875;&#x9762; /50x.html &#x7528;&#x4E8E;&#x5904;&#x7406; 500&#x3001;502&#x3001;503&#x3001;504 &#x7B49;&#x9519;&#x8BEF;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x8FD9;&#x4E9B;&#x9519;&#x8BEF;&#x5219;&#x4F1A;&#x663E;&#x793A;&#x8BE5;&#x9875;&#x9762;&#x3002;</li>
+</ul>
+<h2 id="3&#x6784;&#x5EFA;&#x955C;&#x50CF;"><a name="3&#x6784;&#x5EFA;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#3&#x6784;&#x5EFA;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. 3.&#x6784;&#x5EFA;&#x955C;&#x50CF;</h2>
+<pre><code class="lang-js">docker build -t nginx-test .
+</code></pre>
+<h2 id="4&#x542F;&#x52A8;&#x955C;&#x50CF;&#x5BB9;&#x5668;"><a name="4&#x542F;&#x52A8;&#x955C;&#x50CF;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#4&#x542F;&#x52A8;&#x955C;&#x50CF;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. 4.&#x542F;&#x52A8;&#x955C;&#x50CF;&#x5BB9;&#x5668;</h2>
+<pre><code class="lang-js">docker run -p <span class="hljs-number">8080</span>:<span class="hljs-number">80</span> -it nginx-test
+</code></pre>
+<h2 id="5&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;"><a name="5&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#5&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. 5.&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;</h2>
+<p><a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a></p>
+<h2 id="6&#x7F16;&#x5199;-docker-composeyml"><a name="6&#x7F16;&#x5199;-docker-composeyml" class="anchor-navigation-ex-anchor" href="#6&#x7F16;&#x5199;-docker-composeyml"><i class="fa fa-link" aria-hidden="true"></i></a>2.6. 6.&#x7F16;&#x5199; docker-compose.yml</h2>
+<pre><code class="lang-yml"><span class="hljs-attr">version:</span> <span class="hljs-string">&apos;3&apos;</span>
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">  web:</span>
+<span class="hljs-attr">    image:</span> nginx-test
+<span class="hljs-attr">    volumes:</span>
+<span class="hljs-bullet">      -</span> ./dist:/usr/share/nginx/html
+<span class="hljs-bullet">      -</span> ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">&quot;8080:80&quot;</span>
+</code></pre>
+<h2 id="7docker-compose-&#x542F;&#x52A8;&#x5BB9;&#x5668;"><a name="7docker-compose-&#x542F;&#x52A8;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#7docker-compose-&#x542F;&#x52A8;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>2.7. 7.docker-compose &#x542F;&#x52A8;&#x5BB9;&#x5668;</h2>
+<pre><code class="lang-js">docker-compose up
+</code></pre>
+<h2 id="8&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;"><a name="8&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#8&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>2.8. 8.&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9875;&#x9762;</h2>
+<p><a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a> </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; tomgou 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-03-28 09:38:36
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../whistle/" class="navigation navigation-prev " aria-label="Previous page: whistle">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../git/" class="navigation navigation-next " aria-label="Next page: git">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"docker","level":"1.14.8","depth":2,"next":{"title":"git","level":"1.14.9","depth":2,"path":"pages/others/git/index.md","ref":"pages/others/git/index.md","articles":[]},"previous":{"title":"whistle","level":"1.14.7","depth":2,"path":"pages/others/whistle/index.md","ref":"pages/others/whistle/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-pro","github","hide-element","chapter-fold","splitter","-lunr","-search","search-pro","copy-code-button","back-to-top-button","tbfed-pagefooter","popup","mermaid-gb3","anchor-navigation-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy tomgou 2022","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://tomgou.github.io/algorithm-study/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"back-to-top-button":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"tomgou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"工作总结","language":"zh-hans","gitbook":"*","description":"日常工作记录"},"file":{"path":"pages/others/docker/index.md","mtime":"2023-03-28T01:38:36.645Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-24T07:59:09.030Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
