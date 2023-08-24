@@ -119,6 +119,7 @@
     * [CDN](pages/interview/CDN/index.md)
     * [网络安全](pages/interview/safety/index.md)
     * [http问题](pages/interview/http/index.md)
+    * [mqtt](pages/interview/mqtt/index.md)
     * [url输入到展示](pages/interview/Internet/index.md)
     * [TypeScript](pages/interview/typescript/index.md)
     * [BFC](pages/interview/BFC/index.md)

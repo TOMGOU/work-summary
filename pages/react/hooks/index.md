@@ -131,6 +131,53 @@ const ChildComponent = () => {
 
 ```
 
+## useImperativeHandle
+
+> `useImperativeHandle` 是 React 中的一个 Hook，它允许您向父组件暴露子组件的某些功能或方法，通常用于封装和控制子组件的外部行为。这可以帮助您在父组件中直接操作子组件，而不需要通过 `ref` 来访问子组件的 `DOM` 或实例。
+
+> `useImperativeHandle` 的作用是在子组件中定义一个接口，以便向父组件公开特定的方法或属性。这样父组件就可以通过子组件的 `ref` 来访问这些方法或属性。
+
+```js
+import React, { useRef, forwardRef, useImperativeHandle } from 'react';
+
+// 子组件
+const ChildComponent = forwardRef((props, ref) => {
+  const inputRef = useRef();
+
+  // 在子组件中定义要暴露给父组件的方法
+  useImperativeHandle(ref, () => ({
+    focusInput: () => {
+      inputRef.current.focus();
+    },
+    getInputValue: () => {
+      return inputRef.current.value;
+    }
+  }));
+
+  return <input ref={inputRef} />;
+});
+
+// 父组件
+function ParentComponent() {
+  const childRef = useRef(null);
+
+  const handleButtonClick = () => {
+    childRef.current.focusInput();
+    const inputValue = childRef.current.getInputValue();
+    console.log('Input Value:', inputValue);
+  };
+
+  return (
+    <div>
+      <ChildComponent ref={childRef} />
+      <button onClick={handleButtonClick}>Focus Input</button>
+    </div>
+  );
+}
+
+export default ParentComponent
+```
+
 ## useState 源码
 
 ```js
