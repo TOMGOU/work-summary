@@ -1,9 +1,9 @@
 # Summary
 
 * [工作总结](README.md)
-* [Gitbook](pages/gitbook/index.md)
+<!-- * [Gitbook](pages/gitbook/index.md)
     * [Mermaid-gb3](pages/gitbook/mermaid/index.md)
-    * [Markdown](pages/gitbook/markdown/index.md)
+    * [Markdown](pages/gitbook/markdown/index.md) -->
 * [KeyPoints](pages/experience/index.md)
     * [Web-View](pages/experience/webView/index.md)
     * [Page-Meta](pages/experience/pageMeta/index.md)
@@ -35,6 +35,7 @@
     * [REM](pages/css/REM/index.md)
 * [JavaScript](pages/js/index.md)
     * [性能优化细节](pages/js/performance/index.md)
+    * [JS内存管理机制](pages/js/jsStorage/index.md)
     * [Promise](pages/js/promise/index.md)
     * [原型及原型链](pages/js/proto/index.md)
     * [模块化](pages/js/module/index.md)
@@ -110,9 +111,11 @@
     * [websocket](pages/webpack/websocket/index.md)
     * [rollup与soucemap](pages/webpack/rollup/index.md)
     * [gulp与yargs](pages/webpack/gulp/index.md)
+* [数据结构与算法](pages/algorithm/index.md)
+* [Selenium](pages/selenium/index.md)
 * [Code Review](pages/codeReview/index.md)
     * [Cyclomatic Complexity](pages/codeReview/cyclomaticComplexity/index.md)
-* [Projects](pages/projects/index.md)
+<!-- * [Projects](pages/projects/index.md) -->
 * [Interview](pages/interview/index.md)
     * [事件循环](pages/interview/eventLoop/index.md)
     * [深浅拷贝](pages/interview/deepClone/index.md)
@@ -140,4 +143,3 @@
     * [chrome](pages/others/chrome/index.md)
     * [husky](pages/others/husky/index.md)
     * [typora 破解](pages/others/typora/index.md)
-

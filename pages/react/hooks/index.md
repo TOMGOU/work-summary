@@ -178,6 +178,117 @@ function ParentComponent() {
 export default ParentComponent
 ```
 
+## useTransition
+
+> `useTransition` 是一个用于处理渲染过程中的状态转换的 `Hook`。它可以让我们在组件更新时添加一个延迟，以便在完成数据加载之前保持用户界面的稳定性。在数据加载完成后，`React` 会将组件更新为最新状态。
+
+> 非常适用于以下场景：
+
+  - 数据加载：在数据加载过程中，我们可以使用 `useTransition` 在更新 `UI` 之前显示一个加载指示器，从而优化用户体验。
+
+  - 动画和过渡效果：在组件状态更新时，`useTransition` 可以让我们更好地控制动画和过渡效果的触发时机。
+
+```js
+import { useState, useEffect, useTransition } from 'react';
+
+function SearchComponent() {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [startTransition, isPending] = useTransition();
+
+  useEffect(() => {
+    if (query !== '') {
+      // 模拟 API 请求
+      const fetchData = async () => {
+        const response = await fetch(`https://api.example.com/search?q=${query}`);
+        const data = await response.json();
+        return data;
+      };
+
+      startTransition(async () => {
+        const data = await fetchData();
+        setResults(data);
+      });
+    } else {
+      setResults([]);
+    }
+  }, [query, startTransition]);
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search..."
+      />
+      {isPending ? (
+        <div>Loading...</div>
+      ) : (
+        <ul>
+          {results.map((result) => (
+            <li key={result.id}>{result.name}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+```
+
+## useDeferredValue
+
+> `useDeferredValue` 是一个用于控制组件更新优先级的 `Hook`。它可以让我们将某个值的更新推迟到更合适的时机，从而避免在高优先级任务执行期间进行不必要的渲染。
+
+> 可以应用于以下场景：
+
+  - 用户输入：在处理实时搜索、自动完成等与用户输入相关的功能时，我们可以使用 `useDeferredValue` 来确保输入框在用户输入过程中保持流畅，同时在合适的时机更新相关组件。
+
+  - 列表和大型数据集：当需要处理大量数据时，`useDeferredValue` 可以帮助我们控制渲染的优先级，从而避免阻塞用户界面。例如，在分页加载数据的情况下，我们可以使用 `useDeferredValue` 在高优先级任务完成后再更新数据列表。
+
+```js
+import { useState, useEffect, useDeferredValue } from 'react';
+
+function LiveSearchComponent() {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const deferredQuery = useDeferredValue(query, { timeoutMs: 200 });
+
+  useEffect(() => {
+    if (deferredQuery !== '') {
+      // 模拟 API 请求
+      const fetchData = async () => {
+        const response = await fetch(`https://api.example.com/search?q=${deferredQuery}`);
+        const data = await response.json();
+        return data;
+      };
+
+      fetchData().then((data) => {
+        setResults(data);
+      });
+    } else {
+      setResults([]);
+    }
+  }, [deferredQuery]);
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search..."
+      />
+      <ul>
+        {results.map((result) => (
+          <li key={result.id}>{result.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+
 ## useState 源码
 
 ```js

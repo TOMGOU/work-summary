@@ -14,4 +14,19 @@
 
 ## 3. tsconfig.json如何配置？
 
+```js
+{
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "target": "ES6",           // 目标 JavaScript 版本
+    "module": "CommonJS",      // 模块系统
+    "outDir": "./dist",        // 编译输出目录
+    "rootDir": "./src",        // TypeScript 源代码目录
+    "strict": true,            // 启用严格类型检查
+    "esModuleInterop": true    // 启用 ECMAScript 模块系统互操作性
+  }
+}
+```
+
 ## 4. 什么是泛型？
