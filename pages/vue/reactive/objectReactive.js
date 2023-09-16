@@ -38,7 +38,7 @@ const data = {
   }
 }
 
-reactive(data1)
+reactive(data)
 
 data.a = 5
 data.c.c2 = 6
